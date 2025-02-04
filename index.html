@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+
+    <title>Grupo Premier</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- Custom fonts -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link href="css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+    <link href="css/ionicons.min.css" rel="stylesheet" type="text/css" />
+    <link href="css/animate.min.css" rel="stylesheet" type="text/css" />
+
+    <!-- Background Slider -->
+    <link href="js/vegas/vegas.min.css" rel="stylesheet" type="text/css" />
+
+    <!-- Custom CSS -->
+    <link href="css/csoon.css" rel="stylesheet" />
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+    <!-- Preloader -->
+    <div id="preloader"><div id="status">&nbsp;</div></div>
+
+    <!-- Navigation -->
+    <nav
+      class="navbar navbar-custom navbar-fixed-top wow fadeIn"
+      data-wow-duration="3s"
+      data-wow-delay=".2s"
+      role="navigation"
+    >
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button
+            type="button"
+            class="navbar-toggle"
+            data-toggle="collapse"
+            data-target=".navbar-main-collapse"
+          >
+            <i class="fa fa-bars fa-2x"></i>
+          </button>
+          <a
+            class="navbar-brand page-scroll wow fadeInRight"
+            data-wow-duration="1s"
+            data-wow-delay="1.4s"
+            href="#page-top"
+          >
+            <span class="logo">CSOON</span> <i class="fa fa-star"></i>
+          </a>
+        </div>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
+          <ul
+            class="nav navbar-nav wow fadeInLeft"
+            data-wow-duration="1s"
+            data-wow-delay="1.4s"
+          >
+            <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
+            <li class="hidden">
+              <a href="#page-top"></a>
+            </li>
+            <li>
+              <a class="page-scroll" href="#page-top">INICIO</a>
+            </li>
+            <li>
+              <a class="page-scroll" href="grupo-premier.html">GRUPO PREMIER</a>
+            </li>
+            <li>
+              <a class="page-scroll" href="#services">DIVISIÓN AUTOMOTRIZ</a>
+            </li>
+            <li>
+              <a class="page-scroll" href="#team">DIVISIÓN ALIMENTOS</a>
+            </li>
+            <li>
+              <a class="page-scroll" href="#team">DIVISIÓN INMOBILIARIA</a>
+            </li>
+            <li>
+              <a class="page-scroll" href="#team">RECONOCIMIENTOS</a>
+            </li>
+            <li>
+              <a class="page-scroll" href="#team">EXPERIENCIA PREMIER</a>
+            </li>
+            <li>
+              <a class="page-scroll" href="#contact">CONTACTO</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Intro Header -->
+    <header class="intro">
+      <!-- Video from YouTube. Have Questions? How To: https://github.com/pupunzi/jquery.mb.YTPlayer/wiki -->
+      <a
+        id="bgndVideo"
+        class="player"
+        data-property="{videoURL:'https://www.youtube.com/watch?v=TYrX7w1uIq8', containment:'body', autoPlay:true, realfullscreen:true, optimizeDisplay:true, loop:true, mute:true, startAt:0, stopAt: 200, quality:'auto', opacity:1, showControls: false, showYTLogo:false, vol:25}"
+      ></a>
+
+      <div class="intro-body">
+        <img
+          src="img/logo_premier_automotriz.png"
+          alt=""
+          class="wow fadeIn"
+          data-wow-duration="4s"
+          data-wow-delay=".4s"
+          style="width: 400px"
+        />
+        <div
+          id="clock"
+          class="wow fadeIn"
+          data-wow-duration="6s"
+          data-wow-delay=".6s"
+        ></div>
+        <p
+          class="intro-text wow fadeIn"
+          data-wow-duration="7s"
+          data-wow-delay=".7s"
+        >
+          NOS MUEVE LA PASIÓN DE SEGUIR AVANZANDO A TU LADO
+        </p>
+        <!-- <ul class="list-inline lead">
+          <li>
+            <a
+              href="#about"
+              class="btn btn-border btn-lg page-scroll wow fadeInLeft"
+              data-wow-duration="1s"
+              data-wow-delay="1.4s"
+              ><i class="fa fa-chevron-down"></i> WHO WE ARE</a
+            >
+          </li>
+          <li>
+            <a
+              href="#contact"
+              class="btn btn-white btn-lg page-scroll wow fadeInRight"
+              data-wow-duration="1s"
+              data-wow-delay="1.4s"
+              ><i class="fa fa-chevron-down"></i> CONTACT US</a
+            >
+          </li>
+        </ul> -->
+      </div>
+
+      <div class="video-controls">
+        <a id="video-volume" class="fa fa-volume-off fa-lg" href="#"></a>
+        <a id="video-play" class="fa fa-pause fa-lg" href="#"></a>
+      </div>
+    </header>
+
+    <!-- Nuestro Reto -->
+    <section class="action2 container-fluid text-center wow fadeIn">
+      <div class="row">
+        <div class="col-lg-6 col-lg-offset-3">
+          <h2>NUESTRO RETO ES LLEVARTE MÁS LEJOS</h2>
+          <p>
+            Originarios del Estado de Sinaloa con presencia en 7 estados del
+            país.Consolidados en el Noroeste de México. Representando 22 marcas
+            automotrices con 48 dealers.
+          </p>
+          <ul class="list-inline lead">
+            <li>
+              <a
+                href="https://wrapbootstrap.com/theme/csoon-startup-and-coming-soon-theme-WB04J5003"
+                target="_blank"
+                class="btn btn-white btn-lg"
+                >Conocer más</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="container-fluid text-center wow fadeIn">
+      <div class="row">
+        <div class="col-lg-8 col-lg-offset-2">
+          <h2>WHO WE ARE</h2>
+          <p>
+            The collaborative process of web development requires close
+            integration of technology and design - two disciplines that inform
+            one another. We make hip and exciting web sites. Big and Small.
+            Concept development, interaction design, interface design,
+            production management, strategic planning, usability testing.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Logros -->
+    <section id="about2" class="container-fluid text-center wow fadeIn">
+      <div class="col-lg-10 col-lg-offset-1">
+        <div class="row">
+          <div class="col-lg-3 col-sm-6 wow fadeIn" data-wow-delay=".2s">
+            <h4>
+              <i
+                class="icon icon-heading ion-ios-infinite-outline"
+                data-wow-duration="7s"
+                data-wow-delay=".7s"
+              ></i>
+              ESR
+            </h4>
+            <p>
+              CMEFI (Centro Mexicano para la Filantropía) otorgó a Premier
+              Automotriz el distintivo ESR en 2023 y con mucho orgullo
+              agradecemos a todos los colaboradores que lo hacen posible.
+            </p>
+          </div>
+          <div class="col-lg-3 col-sm-6 wow fadeIn" data-wow-delay=".4s">
+            <h4>
+              <i class="icon ion-ios-stopwatch-outline"></i> Top Companies 2024
+            </h4>
+            <p>
+              En 2024 logramos posicionarnos en el lugar 9 a nivel nacional en
+              el ranking los lugares donde todos quieren trabajar de Super
+              Empresas de la revista Expansión.
+            </p>
+          </div>
+          <div class="col-lg-3 col-sm-6 wow fadeIn" data-wow-delay=".6s">
+            <h4>
+              <i class="icon icon-heading ion-ios-monitor-outline"></i>
+              Expansión 500
+            </h4>
+            <p>
+              Actualmente estamos en el lugar 259 de las 500 empresas más
+              importantes de México.
+            </p>
+          </div>
+          <div class="col-lg-3 col-sm-6 wow fadeIn" data-wow-delay=".8s">
+            <h4><i class="icon icon-heading ion-ios-settings"></i> Dealers</h4>
+            <ul>
+              <li>Mejor desempeño en crecimiento en ventas del año</li>
+              <li>Mejor desempeño en Financiera de marca del año</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experiencia Premier -->
+    <section id="about" class="container-fluid text-center wow fadeIn">
+      <div class="row">
+        <div class="col-lg-8 col-lg-offset-2">
+          <h2>EXPERIENCIA PREMIER</h2>
+          <p>
+            La Experiencia Premier es mucho más que trabajar juntos; es crear un
+            ambiente donde nuestra gente se sienta valorada y conectada.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Eventos -->
+    <section id="about2" class="container-fluid text-center wow fadeIn">
+      <div class="col-lg-10 col-lg-offset-1">
+        <div class="row">
+          <div class="col-lg-3 col-sm-6 wow fadeIn" data-wow-delay=".2s"></div>
+          <div class="col-lg-3 col-sm-6 wow fadeIn" data-wow-delay=".4s">
+            <h4>
+              <i
+                class="icon icon-heading ion-ios-infinite-outline"
+                data-wow-duration="7s"
+                data-wow-delay=".7s"
+              ></i>
+              EVENTOS
+            </h4>
+            <p>
+              Buscamos tener cercanía con nuestros colaboradores con programas y
+              eventos, promoviendo la cultura, valores y objetivos
+              empresariales.
+            </p>
+          </div>
+          <div class="col-lg-3 col-sm-6 wow fadeIn" data-wow-delay=".6s">
+            <h4>
+              <i class="icon ion-ios-stopwatch-outline"></i> CULTURA Y LIDERAZGO
+            </h4>
+            <p>
+              En Premier Automotriz acompañamos a nuestra gente a crecer y
+              sentirse bien, con programas que impulsan su bienestar, desarrollo
+              profesional, salud integral y liderazgo, fortaleciendo nuestra
+              cultura con propósito.
+            </p>
+          </div>
+
+          <div class="col-lg-3 col-sm-6 wow fadeIn" data-wow-delay=".8s"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+      <div class="container wow fadeIn">
+        <div class="row">
+          <div class="col-md-5">
+            <h2>CONTÁCTANOS</h2>
+            <p>CORPORATIVO</p>
+            <h2><i class="icon ion-android-call"></i> 667 846 45 61</h2>
+            <h4>
+              <i class="icon ion-android-mail"></i>
+              contactanos@grupo-premier.com.mx<br />
+              <i class="icon ion-ios-location"></i> Blvd. Pedro Infante 471,
+              Culiacán, Sinaloa.
+            </h4>
+          </div>
+          <div class="col-md-5 col-md-offset-2">
+            <h2>HABLEMOS</h2>
+            <!-- Contact Form - Enter your email address on line 17 of the mail/contact_me.php file to make this form work. -->
+            <!-- WARNING: Some web hosts do not allow emails to be sent through forms to common mail hosts like Gmail or Yahoo. It's recommended that you use a private domain email address! -->
+            <!-- NOTE: To use the contact form, your site must be on a live web host with PHP! The form will not work locally! -->
+            <form name="sentMessage" id="contactForm" novalidate="">
+              <div class="control-group">
+                <div class="form-group floating-label-form-group controls">
+                  <label for="name" class="sr-only control-label">Nombre</label>
+                  <input
+                    type="text"
+                    class="form-control input-lg"
+                    placeholder="Nombre"
+                    id="name"
+                    required=""
+                    data-validation-required-message="Please enter name"
+                  />
+                  <span class="help-block text-danger"></span>
+                </div>
+              </div>
+              <div class="control-group">
+                <div class="form-group floating-label-form-group controls">
+                  <label for="email" class="sr-only control-label"
+                    >Correo</label
+                  >
+                  <input
+                    type="email"
+                    class="form-control input-lg"
+                    placeholder="Correo"
+                    id="email"
+                    required=""
+                    data-validation-required-message="Please enter email"
+                  />
+                  <span class="help-block text-danger"></span>
+                </div>
+              </div>
+              <div class="control-group">
+                <div class="form-group floating-label-form-group controls">
+                  <label for="phone" class="sr-only control-label"
+                    >Teléfono</label
+                  >
+                  <input
+                    type="tel"
+                    class="form-control input-lg"
+                    placeholder="Teléfono"
+                    id="phone"
+                    required=""
+                    data-validation-required-message="Please enter phone number"
+                  />
+                  <span class="help-block text-danger"></span>
+                </div>
+              </div>
+              <div class="control-group">
+                <div class="form-group floating-label-form-group controls">
+                  <label for="message" class="sr-only control-label"
+                    >Mensaje</label
+                  >
+                  <textarea
+                    rows="2"
+                    class="form-control input-lg"
+                    placeholder="Mensaje"
+                    id="message"
+                    required=""
+                    data-validation-required-message="Please enter a message."
+                    aria-invalid="false"
+                  ></textarea>
+                  <span class="help-block text-danger"></span>
+                </div>
+              </div>
+              <div id="success"></div>
+              <button type="submit" class="btn btn-dark btn-lg">Enviar</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Map Section -->
+    <div id="map" class="wow fadeIn"></div>
+
+    <section id="contact2" class="container-fluid text-center wow fadeIn">
+      <div class="overlay"></div>
+      <div class="row">
+        <div class="col-md-3">
+          <i class="fa fa-star fa-2x"></i>
+        </div>
+        <div class="col-md-6">
+          <p>&copy; 2025 Grupo Premier</p>
+        </div>
+        <div class="col-md-3">
+          <ul class="list-inline">
+            <li>
+              <a href="/"><i class="fa fa-twitter fa-fw fa-2x"></i></a>
+            </li>
+            <li>
+              <a href="/"><i class="fa fa-facebook fa-fw fa-2x"></i></a>
+            </li>
+            <li>
+              <a href="/"><i class="fa fa-instagram fa-fw fa-2x"></i></a>
+            </li>
+            <li>
+              <a href="/"><i class="fa fa-envelope fa-fw fa-2x"></i></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="js/jquery.easing.min.js"></script>
+    <script src="js/jquery.countdown.min.js"></script>
+    <script src="js/device.min.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script src="js/smoothscroll.js"></script>
+    <script src="js/form.js"></script>
+    <script src="js/jquery.placeholder.min.js"></script>
+
+    <!-- Google Map -->
+    <!-- Google Maps API Key - Use your own API key to enable the map feature. More information on the Google Maps API can be found at https://developers.google.com/maps/ -->
+    <script
+      type="text/javascript"
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCRngKslUGJTlibkQ3FkfTxj3Xss1UlZDA&amp;sensor=false"
+    ></script>
+    <script src="js/map.js"></script>
+
+    <!-- Plugins for video background -->
+    <script src="js/device.min.js"></script>
+    <script src="js/jquery.mb.YTPlayer.js"></script>
+
+    <!-- Custom Theme JavaScript -->
+    <script src="js/csoon.js"></script>
+  </body>
+</html>
