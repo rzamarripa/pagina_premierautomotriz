@@ -661,3 +661,12 @@ section.demosection a {
     padding: 1rem;
     border-radius: 0.5rem;
 }
+
+.reconocimientos-premier {
+    color: #fff;
+    font-size: 24pt;
+    font-weight: 600;
+    text-align: center;
+    padding: 1rem;
+    border-radius: 0.5rem;
+}

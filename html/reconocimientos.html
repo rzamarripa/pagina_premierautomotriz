@@ -27,7 +27,7 @@
 
     <!-- Custom CSS -->
     <link href="css/csoon.css" rel="stylesheet" />
-
+    <link href="css/colores.css" rel="stylesheet" />
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -40,63 +40,9 @@
     <!-- Preloader -->
     <div id="preloader"><div id="status">&nbsp;</div></div>
 
-    <!-- Navigation -->
-    <nav
-      class="navbar navbar-custom navbar-fixed-top wow fadeIn"
-      data-wow-duration="3s"
-      data-wow-delay=".2s"
-      role="navigation"
-    >
-      <div class="container-fluid">
-        <div class="navbar-header">
-          <button
-            type="button"
-            class="navbar-toggle"
-            data-toggle="collapse"
-            data-target=".navbar-main-collapse"
-          >
-            <i class="fa fa-bars fa-2x"></i>
-          </button>
-          <a
-            class="navbar-brand page-scroll wow fadeInRight"
-            data-wow-duration="1s"
-            data-wow-delay="1.4s"
-            href="#page-top"
-          >
-            <span class="logo">CSOON</span> <i class="fa fa-star"></i>
-          </a>
-        </div>
-        <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
-          <ul
-            class="nav navbar-nav wow fadeInLeft"
-            data-wow-duration="1s"
-            data-wow-delay="1.4s"
-          >
-            <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
-            <li class="hidden">
-              <a href="#page-top"></a>
-            </li>
-            <li>
-              <a class="page-scroll" href="#page-top">HOME</a>
-            </li>
-            <li>
-              <a class="page-scroll" href="#about">WHO WE ARE</a>
-            </li>
-            <li>
-              <a class="page-scroll" href="#services">OUR SERVICES</a>
-            </li>
-            <li>
-              <a class="page-scroll" href="#team">TEAM</a>
-            </li>
-            <li>
-              <a class="page-scroll" href="#contact">CONTACT</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
+    <div id="nav"></div>
 
+    <!-- Intro Header -->
     <header class="intro">
       <!-- Video from YouTube. Have Questions? How To: https://github.com/pupunzi/jquery.mb.YTPlayer/wiki -->
       <a
@@ -106,13 +52,6 @@
       ></a>
 
       <div class="intro-body">
-        <img
-          src="img/logo.png"
-          alt=""
-          class="wow fadeIn"
-          data-wow-duration="4s"
-          data-wow-delay=".4s"
-        />
         <div
           id="clock"
           class="wow fadeIn"
@@ -124,28 +63,8 @@
           data-wow-duration="7s"
           data-wow-delay=".7s"
         >
-          WE ARE COMING SOON. STAY TUNED!
+          RECONOCIDOS POR TRANSFORMAR E INSPIRAR
         </p>
-        <ul class="list-inline lead">
-          <li>
-            <a
-              href="#about"
-              class="btn btn-border btn-lg page-scroll wow fadeInLeft"
-              data-wow-duration="1s"
-              data-wow-delay="1.4s"
-              ><i class="fa fa-chevron-down"></i> WHO WE ARE</a
-            >
-          </li>
-          <li>
-            <a
-              href="#contact"
-              class="btn btn-white btn-lg page-scroll wow fadeInRight"
-              data-wow-duration="1s"
-              data-wow-delay="1.4s"
-              ><i class="fa fa-chevron-down"></i> CONTACT US</a
-            >
-          </li>
-        </ul>
       </div>
 
       <div class="video-controls">
@@ -154,17 +73,178 @@
       </div>
     </header>
 
+    <!-- Action2 Section -->
+    <section
+      class="action2 container-fluid text-center wow fadeIn rojo-premier"
+    >
+      <div class="row">
+        <div class="col-lg-6 col-lg-offset-3">
+          <!-- <h2>DESIGNER/CODER FRIENDLY</h2> -->
+          <p>
+            En Premier Automotriz, el éxito va más allá de los logros
+            comerciales. Nos enfocamos en generar un impacto positivo en las
+            personas y comunidades que tocamos. A través de la ética, el
+            compromiso y la innovación, buscamos inspirar a todos a nuestro
+            alrededor y fomentar cambios que perduren.
+          </p>
+        </div>
+      </div>
+    </section>
+
     <!-- About Section -->
-    <section id="about" class="container-fluid text-center wow fadeIn">
+    <!-- <section id="about" class="container-fluid text-center wow fadeIn">
       <div class="row">
         <div class="col-lg-8 col-lg-offset-2">
-          <h2>Liderando la Innovación en Proyectos Inmobiliarios</h2>
+          <h2>WHO WE ARE</h2>
           <p>
-            Como desarrolladora de proyectos inmobiliarios, nuestros inicios
-            estuvieron marcados por el servicio a Grupo Premier y Tenedora
-            Automotriz, consolidándonos oficialmente en 2016 con la construcción
-            de la emblemática Torre Premier.
+            The collaborative process of web development requires close
+            integration of technology and design - two disciplines that inform
+            one another. We make hip and exciting web sites. Big and Small.
+            Concept development, interaction design, interface design,
+            production management, strategic planning, usability testing.
           </p>
+        </div>
+      </div>
+    </section> -->
+
+    <!-- About2 Section -->
+    <section id="about2" class="container-fluid text-center wow fadeIn">
+      <div class="col-lg-10 col-lg-offset-1">
+        <div class="row">
+          <div class="col-lg-12">
+            <h4>Distintivo ESR</h4>
+            <p>
+              En Premier Automotriz, hemos sido pioneros al recibir el
+              Distintivo ESR de CEMEFI en 2006, destacando nuestro compromiso
+              con tres pilares fundamentales: vinculación con la comunidad,
+              responsabilidad social y ética empresarial. En 2016 y 2017, fuimos
+              reconocidos a nivel nacional con premios y menciones especiales
+              por nuestras prácticas innovadoras que aportan valor al negocio y
+              a la sociedad.
+            </p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-4 col-sm-6 wow fadeIn" data-wow-delay=".2s">
+            <h4>
+              <i
+                class="icon icon-heading ion-ios-infinite-outline"
+                data-wow-duration="7s"
+                data-wow-delay=".7s"
+              ></i>
+              2016
+            </h4>
+            <ul>
+              <li>Voluntariado corporativo.</li>
+              <li>Voluntario Premier.</li>
+              <li>Calidad de vida. Universidad Premier.</li>
+            </ul>
+          </div>
+          <div class="col-lg-4 col-sm-6 wow fadeIn" data-wow-delay=".4s">
+            <h4><i class="icon ion-ios-stopwatch-outline"></i> 2017</h4>
+            <ul>
+              <li>Calidad de vida.</li>
+              <li>Liderazgo con impacto social Mención especial.</li>
+              <li>Auxilio vial.</li>
+            </ul>
+          </div>
+          <div class="col-lg-4 col-sm-6 wow fadeIn" data-wow-delay=".6s">
+            <h4>
+              <i class="icon icon-heading ion-ios-monitor-outline"></i>
+              2018
+            </h4>
+            <ul>
+              <li>Ética empresarial.</li>
+              <li>Gestión y vivencia de los valores Premier.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="container-fluid text-center wow fadeIn">
+      <div class="col-lg-10 col-lg-offset-1">
+        <div class="row">
+          <div class="col-lg-6 col-sm-6 wow fadeIn" data-wow-delay=".2s">
+            <h4>
+              <i class="icon icon-heading ion-ios-star-outline"></i> Top
+              Companies
+            </h4>
+            <p>
+              En 2023 logramos posicionarnos en el lugar 9 a nivel nacional en
+              el ranking los lugares donde todos quieren trabajar de Súper
+              Empresas de la revista Expansión.
+            </p>
+          </div>
+          <div class="col-lg-6 col-sm-6 wow fadeIn" data-wow-delay=".4s">
+            <h4>
+              <i class="icon icon-heading ion-ios-cloud-download-outline"></i>
+              Expansión 500
+            </h4>
+            <p>
+              Actualmente estamos en el lugar 259 de las 500 empresas más
+              importantes de México.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- sponsors -->
+    <div id="sponsor" class="wow fadeIn">
+      <div class="container-fluid">
+        <div class="row sponsor text-center">
+          <div
+            class="col-md-10 gray col-md-offset-1 text-center p-4 text-white reconocimientos-premier"
+          >
+            DISTINCIÓN Y RECONOCIMIENTO DE LAS MARCAS A NUESTROS DEALERS
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- About2 Section -->
+    <section id="about2" class="container-fluid text-center wow fadeIn">
+      <div class="col-lg-10 col-lg-offset-1">
+        <div class="row">
+          <div class="col-lg-4 col-sm-6 wow fadeIn" data-wow-delay=".2s">
+            <h4>
+              <i
+                class="icon icon-heading ion-ios-infinite-outline"
+                data-wow-duration="7s"
+                data-wow-delay=".7s"
+              ></i>
+              Culiacán
+            </h4>
+            <ul>
+              <li>President’s Award 2011-2020</li>
+              <li>National Leader in scorecard 2012</li>
+              <li>Círculo de la excelencia TFS 2011-2020</li>
+              <li>Certificación TSM Kodawari 2011 - 2020</li>
+              <li>Proyecto finalista de foro KAIZEN 2017-2019</li>
+              <li>Certificación Body en Paint 2021</li>
+            </ul>
+          </div>
+          <div class="col-lg-4 col-sm-6 wow fadeIn" data-wow-delay=".6s">
+            <h4>
+              <i class="icon icon-heading ion-ios-monitor-outline"></i>
+              Mazatlán
+            </h4>
+            <ul>
+              <li>Certificación TSM Kodawari 2011-2020</li>
+              <li>Proyecto finalista de foro KAIZEN 2021</li>
+            </ul>
+          </div>
+          <div class="col-lg-4 col-sm-6 wow fadeIn" data-wow-delay=".6s">
+            <h4>
+              <i class="icon icon-heading ion-ios-monitor-outline"></i>
+              Los Mochis
+            </h4>
+            <ul>
+              <li>Certificación TSM Kodawari 2012 - 2020</li>
+            </ul>
+          </div>
         </div>
       </div>
     </section>
@@ -173,12 +253,12 @@
     <section class="action3 container-fluid text-center wow fadeIn">
       <div class="row">
         <div class="col-lg-8 col-lg-offset-2">
-          <h2>
-            Desde entonces, hemos impulsado nuestro crecimiento y experiencia,
-            llevando a cabo la construcción de 34 agencias automotrices, así
-            como proyectos destacados como Torre Premier y Plaza Santander en
-            Culiacán y Hermosillo, alcanzando un total de 149,695 m² rentables.
-          </h2>
+          <!-- <h2>CSOON IS THE PERFECT THEME FOR YOUR NEXT PROJECT!</h2> -->
+          <ul>
+            <li>Best dealer in costumer service 2017</li>
+            <li>Sales Challenge Nacional 2018</li>
+            <li>Sales contest 2019</li>
+          </ul>
         </div>
       </div>
     </section>
@@ -194,158 +274,210 @@
                 data-wow-duration="7s"
                 data-wow-delay=".7s"
               ></i>
-              LIFETIME UPDATES
+              Culiacán
             </h4>
-            <p>
-              Lorem ipsum dolor sit amet consecte tur adipiscingtitor diam, a
-              accumsan justo laoreeta accumsan justo laoreet. Lorem ipsum dolor.
-            </p>
-          </div>
-          <div class="col-lg-3 col-sm-6 wow fadeIn" data-wow-delay=".4s">
-            <h4><i class="icon ion-ios-stopwatch-outline"></i> LIGHTWEIGHT</h4>
-            <p>
-              Lorem ipsum dolor sit amet consecte tur adipiscingtitor diam, a
-              accumsan justo laoreeta accumsan justo laoreet. Lorem ipsum dolor.
-            </p>
+            <ul>
+              <li>Mejor distribuidor posventa 2012, 2013</li>
+              <li>Mejor distribuidor Eco Drive 2013</li>
+              <li>1er lugar skill contest ventas 2013</li>
+              <li>Primeros 3 lugares 2014, 2015 contest ventas.</li>
+              <li>Mejor participación de mercado con financiera TFS 2014</li>
+            </ul>
           </div>
           <div class="col-lg-3 col-sm-6 wow fadeIn" data-wow-delay=".6s">
             <h4>
               <i class="icon icon-heading ion-ios-monitor-outline"></i>
-              RESPONSIVE
+              Mazatlán
             </h4>
-            <p>
-              Lorem ipsum dolor sit amet consecte tur adipiscingtitor diam, a
-              accumsan justo laoreeta accumsan justo laoreet. Lorem ipsum dolor.
-            </p>
-          </div>
-          <div class="col-lg-3 col-sm-6 wow fadeIn" data-wow-delay=".8s">
-            <h4>
-              <i class="icon icon-heading ion-ios-settings"></i> MULTI-PURPOSE
-            </h4>
-            <p>
-              Lorem ipsum dolor sit amet consecte tur adipiscingtitor diam, a
-              accumsan justo laoreeta accumsan justo laoreet. Lorem ipsum dolor.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Action2 Section MailChimp Signup Form -->
-    <section class="action2 container-fluid text-center wow fadeIn">
-      <div class="row">
-        <div class="col-lg-6 col-lg-offset-3">
-          <h2>Get notified!</h2>
-          <p>
-            MailChimp Signup Form. Lorem ipsum dolor sit amet, consectetur
-            adipiscing elit. Nulla convallis pulvinar vestibulum.
-          </p>
-          <!-- MailChimp Signup Form -->
-          <!-- Replace the form action in the line below with your MailChimp embed action! For more information on how to do this please visit the Docs! -->
-          <form
-            role="form"
-            action="http://forbetterweb.us11.list-manage.com/subscribe/post?u=4f751a6c58b225179404715f0&amp;id=18fc72763a"
-            method="post"
-            id="mc-embedded-subscribe-form"
-            name="mc-embedded-subscribe-form"
-            class="form-inline subscribe-form"
-            target="_blank"
-            novalidate=""
-          >
-            <div class="input-group input-group-lg">
-              <input
-                type="email"
-                name="EMAIL"
-                class="form-control"
-                id="mce-EMAIL"
-                placeholder="Email address..."
-              />
-              <span class="input-group-btn">
-                <button
-                  type="submit"
-                  name="subscribe"
-                  id="mc-embedded-subscribe"
-                  class="btn btn-white"
-                >
-                  Get notified!
-                </button>
-              </span>
-            </div>
-            <div id="mce-responses">
-              <div
-                class="response"
-                id="mce-error-response"
-                style="display: none"
-              ></div>
-              <div
-                class="response"
-                id="mce-success-response"
-                style="display: none"
-              ></div>
-            </div>
-          </form>
-          <!-- End MailChimp Signup Form -->
-        </div>
-      </div>
-    </section>
-
-    <!-- Services Section -->
-    <section id="services" class="container-fluid text-center wow fadeIn">
-      <div class="col-lg-10 col-lg-offset-1">
-        <div class="row">
-          <div class="col-lg-8 col-lg-offset-2">
-            <h2>Our Services</h2>
-            <p>
-              There are many variations of passages of Lorem Ipsum available,
-              but the majority have suffered alteration in some form, by
-              injected humour, or randomised words which don't look even
-              slightly believable.
-            </p>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-lg-3 col-sm-6 wow fadeIn" data-wow-delay=".2s">
-            <h4>
-              <i class="icon icon-heading ion-ios-star-outline"></i> Lorem ipsum
-            </h4>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
-              convallis pulvinar vestibulum. Donec eleifend, sem sed dictum
-              mattis, turpis purus placerat eros
-            </p>
-          </div>
-          <div class="col-lg-3 col-sm-6 wow fadeIn" data-wow-delay=".4s">
-            <h4>
-              <i class="icon icon-heading ion-ios-cloud-download-outline"></i>
-              Suspendisse risu
-            </h4>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
-              convallis pulvinar vestibulum. Donec eleifend, sem sed dictum
-              mattis, turpis purus placerat eros
-            </p>
+            <ul>
+              <li>Mejor desempeño en DPI servicio 2015</li>
+              <li>Mejor desempeño en DPI ventas 2015, 2017</li>
+              <li>Mejor vendedor 2016</li>
+              <li>1er lugar gerentes de ventas 2016</li>
+              <li>2do lugar desempeño DPI 2016, 2017</li>
+            </ul>
           </div>
           <div class="col-lg-3 col-sm-6 wow fadeIn" data-wow-delay=".6s">
             <h4>
-              <i class="icon icon-heading ion-ios-pie-outline"></i> Nullam
-              ultrices
+              <i class="icon icon-heading ion-ios-monitor-outline"></i>
+              Los Mochis
             </h4>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
-              convallis pulvinar vestibulum. Donec eleifend, sem sed dictum
-              mattis, turpis purus placerat eros
-            </p>
+            <ul>
+              <li>
+                2do y 3er lugar mejor desempeño DPI Servicio y refacciones 2017
+              </li>
+              <li>3er Lugar mejor desempeño DPI administración 2017</li>
+              <li>Mayor número de ventas S500 2019</li>
+              <li>2do lugar desempeño DPI ventas 2019</li>
+            </ul>
           </div>
-          <div class="col-lg-3 col-sm-6 wow fadeIn" data-wow-delay=".8s">
+          <div class="col-lg-3 col-sm-6 wow fadeIn" data-wow-delay=".6s">
             <h4>
-              <i class="icon icon-heading ion-ios-camera-outline"></i> Sed
-              porttitor
+              <i class="icon icon-heading ion-ios-monitor-outline"></i>
+              Los Mochis
             </h4>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
-              convallis pulvinar vestibulum. Donec eleifend, sem sed dictum
-              mattis, turpis purus placerat eros
-            </p>
+            <ul>
+              <li>1er lugar DPI ventas 2020</li>
+              <li>2do lugar DPI Administración 2020</li>
+              <li>2do lugar DPI 2020</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Action2 Section -->
+    <section class="action3 container-fluid text-center wow fadeIn">
+      <div class="row">
+        <div class="col-lg-8 col-lg-offset-2">
+          <!-- <h2>CSOON IS THE PERFECT THEME FOR YOUR NEXT PROJECT!</h2> -->
+          <ul>
+            <li>Distribuidor del año 2007 y 2008</li>
+            <li>Mejor desempeño contra la competência 2010</li>
+            <li>Distribuidor AMG del año 2010</li>
+            <li>Campeón F&I 2013</li>
+            <li>Mejor punto de venta Mercedes-Benz Categoría B 2013, 2014</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Nueva Sección de Reconocimientos KIA -->
+    <!-- Nueva Sección de Reconocimientos KIA -->
+    <section id="about2" class="container-fluid text-center wow fadeIn">
+      <div class="col-lg-10 col-lg-offset-1">
+        <div class="row">
+          <div class="col-lg-6 col-sm-6 wow fadeIn" data-wow-delay=".2s">
+            <h4>
+              <i class="icon icon-heading ion-ios-infinite-outline"></i>
+              Culiacán
+            </h4>
+            <ul>
+              <li>Prestigious Dealer</li>
+              <li>
+                Reconocimiento en categoría de Excelencia por cumplir con los
+                estándares de concesionario 2016
+              </li>
+              <li>3er lugar en venta GAP (Seguro de protección) 2018</li>
+            </ul>
+          </div>
+          <div class="col-lg-6 col-sm-6 wow fadeIn" data-wow-delay=".6s">
+            <h4>
+              <i class="icon icon-heading ion-ios-monitor-outline"></i>
+              Hermosillo
+            </h4>
+            <ul>
+              <li>Reconocimiento PLATINUM PRESTIGE 2016</li>
+              <li>1er lugar en la categoría Mercadotecnia local 2018</li>
+              <li>Prestigious Dealer</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Action2 Section -->
+    <section class="action3 container-fluid text-center wow fadeIn">
+      <div class="row">
+        <div class="col-lg-8 col-lg-offset-2">
+          <!-- <h2>CSOON IS THE PERFECT THEME FOR YOUR NEXT PROJECT!</h2> -->
+          <ul>
+            <li>
+              Regional Winner “Best dealer in customer care in the Americas”
+              2016
+            </li>
+            <li>Best dealer costumer service en Latinoamérica 2017</li>
+            <li>1er lugar nacional concurso de fotografía temática</li>
+            <li>“Money Can’t Buy Award” 2021</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Action2 Section -->
+    <section class="action3 container-fluid text-center wow fadeIn">
+      <div class="row">
+        <div class="col-lg-8 col-lg-offset-2">
+          <ul>
+            <li>Líder nacional en ventas 2009 y 2010</li>
+            <li>Distribuidor del año 2007</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Action2 Section -->
+    <section id="about2" class="container-fluid text-center wow fadeIn">
+      <div class="col-lg-10 col-lg-offset-1">
+        <div class="row">
+          <div class="col-lg-4 col-sm-6 wow fadeIn" data-wow-delay=".2s">
+            <h4>
+              <i class="icon icon-heading ion-ios-infinite-outline"></i>
+              Culiacán
+            </h4>
+            <ul>
+              <li>Líder nacional en ventas 2006 – 2010</li>
+              <li>Distribuidor del año 2006 – 2009</li>
+            </ul>
+          </div>
+          <div class="col-lg-4 col-sm-6 wow fadeIn" data-wow-delay=".6s">
+            <h4>
+              <i class="icon icon-heading ion-ios-monitor-outline"></i>
+              Mazatlán
+            </h4>
+            <ul>
+              <li>Concesionario del año 2016</li>
+              <li>Leaders Club 2012, 2014 - 2017, 2019</li>
+              <li>Distribuidor del año Chevrolet 2016</li>
+            </ul>
+          </div>
+          <div class="col-lg-4 col-sm-6 wow fadeIn" data-wow-delay=".6s">
+            <h4>
+              <i class="icon icon-heading ion-ios-monitor-outline"></i>
+              Hermosillo
+            </h4>
+            <ul>
+              <li>Leaders Club 2017 - 2020</li>
+              <li>Club Diamante 2020</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about2" class="container-fluid text-center wow fadeIn">
+      <div class="col-lg-10 col-lg-offset-1">
+        <div class="row">
+          <div class="col-lg-4 col-sm-6 wow fadeIn" data-wow-delay=".2s">
+            <h4>
+              <i class="icon icon-heading ion-ios-infinite-outline"></i>
+              Culiacán
+            </h4>
+            <ul>
+              <li>
+                Distribuidor con mejor desempeño en crecimiento de ventas 2017
+              </li>
+              <li>Mejor vendedor de unidades del año 2018, 2019</li>
+            </ul>
+          </div>
+          <div class="col-lg-4 col-sm-6 wow fadeIn" data-wow-delay=".6s">
+            <h4>
+              <i class="icon icon-heading ion-ios-monitor-outline"></i>
+              Tijuana
+            </h4>
+            <ul>
+              <li>Distribuidor del año 2015</li>
+              <li>Dealer del año 2016</li>
+            </ul>
+          </div>
+          <div class="col-lg-4 col-sm-6 wow fadeIn" data-wow-delay=".6s">
+            <h4>
+              <i class="icon icon-heading ion-ios-monitor-outline"></i>
+              Mazatlán
+            </h4>
+            <ul>
+              <li>Distribuidor con mejor desempeño en Hyundai Finance 2017</li>
+            </ul>
           </div>
         </div>
       </div>
@@ -528,29 +660,6 @@
       </div>
     </section>
 
-    <!-- sponsors -->
-    <div id="sponsor" class="wow fadeIn">
-      <div class="container-fluid">
-        <div class="row sponsor text-center">
-          <div class="col-md-2 gray col-md-offset-1">
-            <a href="/"><img src="img/logo4.png" alt="" /></a>
-          </div>
-          <div class="col-md-2 gray">
-            <a href="/"><img src="img/logo2.png" alt="" /></a>
-          </div>
-          <div class="col-md-2 gray">
-            <a href="/"><img src="img/logo3.png" alt="" /></a>
-          </div>
-          <div class="col-md-2 gray">
-            <a href="/"><img src="img/logo1.png" alt="" /></a>
-          </div>
-          <div class="col-md-2 gray">
-            <a href="/"><img src="img/logo5.png" alt="" /></a>
-          </div>
-        </div>
-      </div>
-    </div>
-
     <!-- Contact Section -->
     <section id="contact">
       <div class="container wow fadeIn">
@@ -683,6 +792,13 @@
     <!-- jQuery -->
     <script src="js/jquery.js"></script>
 
+    <script>
+      $(document).ready(function () {
+        $.get("nav.html", function (data) {
+          $("#nav").replaceWith(data);
+        });
+      });
+    </script>
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
 
@@ -703,15 +819,9 @@
     ></script>
     <script src="js/map.js"></script>
 
-    <!-- Background image -->
-    <script src="js/vegas/vegas.min.js"></script>
-    <script>
-      $("body").vegas({
-        transitionDuration: 2000,
-        slides: [{ src: "img/2.jpg" }],
-        transition: "swirlRight",
-      });
-    </script>
+    <!-- Plugins for video background -->
+    <script src="js/device.min.js"></script>
+    <script src="js/jquery.mb.YTPlayer.js"></script>
 
     <!-- Custom Theme JavaScript -->
     <script src="js/csoon.js"></script>

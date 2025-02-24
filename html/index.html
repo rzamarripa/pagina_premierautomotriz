@@ -40,57 +40,7 @@
     <!-- Preloader -->
     <div id="preloader"><div id="status">&nbsp;</div></div>
 
-    <!-- Navigation -->
-    <nav
-      class="navbar navbar-custom navbar-fixed-top wow fadeIn"
-      data-wow-duration="3s"
-      data-wow-delay=".2s"
-      role="navigation"
-    >
-      <div class="container-fluid">
-        <div class="navbar-header">
-          <button
-            type="button"
-            class="navbar-toggle"
-            data-toggle="collapse"
-            data-target=".navbar-main-collapse"
-          >
-            <i class="fa fa-bars fa-2x"></i>
-          </button>
-          <a
-            class="navbar-brand page-scroll wow fadeInRight"
-            data-wow-duration="1s"
-            data-wow-delay="1.4s"
-            href="#page-top"
-          >
-            <span class="logo">Premier Automotriz</span>
-            <i class="fa fa-star"></i>
-          </a>
-        </div>
-        <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
-          <ul
-            class="nav navbar-nav wow fadeInLeft"
-            data-wow-duration="1s"
-            data-wow-delay="1.4s"
-          >
-            <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
-            <li class="hidden">
-              <a href="#page-top"></a>
-            </li>
-            <li>
-              <a class="page-scroll" href="#page-top">INICIO</a>
-            </li>
-            <li>
-              <a class="page-scroll" href="grupo-premier.html">GRUPO PREMIER</a>
-            </li>
-            <li>
-              <a class="page-scroll" href="#contact">CONTACTO</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
+    <div id="nav"></div>
 
     <!-- Intro Header -->
     <header class="intro">
@@ -416,7 +366,13 @@
 
     <!-- jQuery -->
     <script src="js/jquery.js"></script>
-
+    <script>
+      $(document).ready(function () {
+        $.get("nav.html", function (data) {
+          $("#nav").replaceWith(data);
+        });
+      });
+    </script>
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
 

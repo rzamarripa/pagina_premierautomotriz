@@ -40,62 +40,7 @@
     <!-- Preloader -->
     <div id="preloader"><div id="status">&nbsp;</div></div>
 
-    <!-- Navigation -->
-    <nav
-      class="navbar navbar-custom navbar-fixed-top wow fadeIn"
-      data-wow-duration="3s"
-      data-wow-delay=".2s"
-      role="navigation"
-    >
-      <div class="container-fluid">
-        <div class="navbar-header">
-          <button
-            type="button"
-            class="navbar-toggle"
-            data-toggle="collapse"
-            data-target=".navbar-main-collapse"
-          >
-            <i class="fa fa-bars fa-2x"></i>
-          </button>
-          <a
-            class="navbar-brand page-scroll wow fadeInRight"
-            data-wow-duration="1s"
-            data-wow-delay="1.4s"
-            href="#page-top"
-          >
-            <span class="logo">CSOON</span> <i class="fa fa-star"></i>
-          </a>
-        </div>
-        <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
-          <ul
-            class="nav navbar-nav wow fadeInLeft"
-            data-wow-duration="1s"
-            data-wow-delay="1.4s"
-          >
-            <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
-            <li class="hidden">
-              <a href="#page-top"></a>
-            </li>
-            <li>
-              <a class="page-scroll" href="#page-top">HOME</a>
-            </li>
-            <li>
-              <a class="page-scroll" href="#about">WHO WE ARE</a>
-            </li>
-            <li>
-              <a class="page-scroll" href="#services">OUR SERVICES</a>
-            </li>
-            <li>
-              <a class="page-scroll" href="#team">TEAM</a>
-            </li>
-            <li>
-              <a class="page-scroll" href="#contact">CONTACT</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
+    <div id="nav"></div>
 
     <!-- Intro Header -->
     <header class="intro">
@@ -173,10 +118,7 @@
           <h2>AUTOMOTRIZ</h2>
           <!-- <p>It’s time to grow your business. Go make something awesome.</p> -->
           <p>
-            <a
-              href="division-automotriz.html"
-              target="_blank"
-              class="btn btn-white btn-lg"
+            <a href="division-automotriz.html" class="btn btn-white btn-lg"
               >Ver más</a
             >
           </p>
@@ -191,10 +133,7 @@
           <h2>ALIMENTOS</h2>
           <!-- <p>It’s time to grow your business. Go make something awesome.</p> -->
           <p>
-            <a
-              href="https://wrapbootstrap.com/theme/csoon-startup-and-coming-soon-theme-WB04J5003"
-              target="_blank"
-              class="btn btn-white btn-lg"
+            <a href="./division-alimentos.html" class="btn btn-white btn-lg"
               >Ver más</a
             >
           </p>
@@ -209,10 +148,7 @@
           <h2>INMOBILIARIA</h2>
           <!-- <p>It’s time to grow your business. Go make something awesome.</p> -->
           <p>
-            <a
-              href="https://wrapbootstrap.com/theme/csoon-startup-and-coming-soon-theme-WB04J5003"
-              target="_blank"
-              class="btn btn-white btn-lg"
+            <a href="./division-inmobiliaria.html" class="btn btn-white btn-lg"
               >Ver más</a
             >
           </p>
@@ -246,6 +182,12 @@
     <!-- Background image -->
     <script src="js/vegas/vegas.min.js"></script>
     <script>
+      $(document).ready(function () {
+        $.get("nav.html", function (data) {
+          $("#nav").replaceWith(data);
+        });
+      });
+
       $("body").vegas({
         transitionDuration: 2000,
         slides: [{ src: "img/2.jpg" }],
