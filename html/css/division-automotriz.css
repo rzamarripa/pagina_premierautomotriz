@@ -1,0 +1,161 @@
+.img-responsive {
+    width: 100%;
+    height: auto;
+  }
+
+  .hidden-xs {
+    display: none;
+  }
+
+  .visible-xs {
+    display: block;
+  }
+
+  @media (min-width: 768px) {
+    .hidden-xs {
+      display: block;
+    }
+    .visible-xs {
+      display: none;
+    }
+  }
+
+  .video-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1;
+  }
+
+  #video-marcas {
+    width: 100%;
+    height: auto;
+    min-height: 100%;
+    min-width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .image-background {
+    position: relative;
+    width: 100%;
+    height: auto;
+  }
+
+  .image-background-valores {
+    background-image: url("img/division-automotriz/valores-fondo-web.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 300px; /* Ajusta la altura según sea necesario */
+  }
+
+  @media (max-width: 767px) {
+    .image-background-valores {
+      background-image: url("img/division-automotriz/valores-fondo-mobile.jpg");
+    }
+  }
+
+  .text-center-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 2em; /* Ajusta el tamaño de fuente según sea necesario */
+    text-align: center;
+  }
+
+  #aferrado,
+  #servicio-wow {
+    background-image: url("img/division-automotriz/aferrado-web.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 300px;
+    padding: 80px 0;
+
+    position: relative;
+  }
+
+  #servicio-wow {
+    background-image: url("img/division-automotriz/servicio-wow-web.jpg");
+  }
+
+  @media (max-width: 767px) {
+    #aferrado,
+    #servicio-wow {
+      height: auto;
+      min-height: 400px;
+      display: flex;
+      align-items: flex-end;
+      padding-bottom: 60px;
+    }
+
+    #aferrado {
+      background-image: url("img/division-automotriz/aferrado-mobile.jpg");
+    }
+
+    #servicio-wow {
+      background-image: url("img/division-automotriz/servicio-wow-mobile.jpg");
+    }
+
+    .fs-4 {
+      font-size: 1.2em;
+      padding: 20px;
+    }
+
+    #aferrado .row,
+    #servicio-wow .row {
+      width: 100%;
+      margin: 0;
+    }
+  }
+
+  .text-white {
+    color: white;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+  }
+
+  #contagio-felicidad {
+    background-image: url("img/division-automotriz/contagio-felicidad-web.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 300px;
+    padding: 80px 0;
+    position: relative;
+  }
+
+  @media (max-width: 767px) {
+    #contagio-felicidad {
+      background-image: url("img/division-automotriz/contagio-felicidad-mobile.jpg");
+      height: auto;
+      min-height: 400px;
+      display: flex;
+      align-items: flex-end;
+      padding-bottom: 60px;
+    }
+  }
+
+  #diversion {
+    background-image: url("img/division-automotriz/diversion-web.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 300px;
+    padding: 80px 0;
+    position: relative;
+  }
+
+  @media (max-width: 767px) {
+    #diversion {
+      background-image: url("img/division-automotriz/diversion-mobile.jpg");
+      height: auto;
+      min-height: 400px;
+      display: flex;
+      align-items: flex-end;
+      padding-bottom: 60px;
+    }
+  }

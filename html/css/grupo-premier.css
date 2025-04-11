@@ -1,0 +1,47 @@
+.grupo-premier-section,
+.automotriz-section,
+.alimentos-section,
+.inmobiliaria-section {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 40px 20px;
+    color: black;
+}
+
+.grupo-premier-section {
+    background-image: url("../img/grupoPremier/fondo-web.jpg");
+}
+
+.automotriz-section {
+    background-image: url("../img/grupoPremier/automotriz/fondo-automotriz-web.jpg");
+    color: white;
+}
+
+.alimentos-section {
+    background-image: url("../img/grupoPremier/alimentos/fondo-alimentos-web.jpg");
+    color: white;
+}
+
+.inmobiliaria-section {
+    background-image: url("../img/grupoPremier/inmobiliaria/fondo-inmobiliaria-web.jpg");
+    color: white;
+}
+
+@media (max-width: 768px) {
+    .grupo-premier-section {
+        background-image: url("../img/grupoPremier/fondo-mobile.jpg");
+    }
+
+    .automotriz-section {
+        background-image: url("../img/grupoPremier/automotriz/fondo-automotriz-mobile.jpg");
+    }
+
+    .alimentos-section {
+        background-image: url("../img/grupoPremier/alimentos/fondo-alimentos-mobile.jpg");
+    }
+
+    .inmobiliaria-section {
+        background-image: url("../img/grupoPremier/inmobiliaria/fondo-inmobiliaria-mobile.jpg");
+    }
+}

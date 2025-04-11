@@ -1,0 +1,12 @@
+.fondo-gris-transparente {
+  background-color: rgba(98, 98, 98, 0.5);
+  color: white;
+}
+
+.fondo-gris-transparente h2 {
+  color: white;
+}
+
+.fondo-gris-transparente p {
+  color: white;
+}
