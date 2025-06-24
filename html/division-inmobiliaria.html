@@ -41,61 +41,7 @@
     <div id="preloader"><div id="status">&nbsp;</div></div>
 
     <!-- Navigation -->
-    <nav
-      class="navbar navbar-custom navbar-fixed-top wow fadeIn"
-      data-wow-duration="3s"
-      data-wow-delay=".2s"
-      role="navigation"
-    >
-      <div class="container-fluid">
-        <div class="navbar-header">
-          <button
-            type="button"
-            class="navbar-toggle"
-            data-toggle="collapse"
-            data-target=".navbar-main-collapse"
-          >
-            <i class="fa fa-bars fa-2x"></i>
-          </button>
-          <a
-            class="navbar-brand page-scroll wow fadeInRight"
-            data-wow-duration="1s"
-            data-wow-delay="1.4s"
-            href="#page-top"
-          >
-            <span class="logo">CSOON</span> <i class="fa fa-star"></i>
-          </a>
-        </div>
-        <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
-          <ul
-            class="nav navbar-nav wow fadeInLeft"
-            data-wow-duration="1s"
-            data-wow-delay="1.4s"
-          >
-            <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
-            <li class="hidden">
-              <a href="#page-top"></a>
-            </li>
-            <li>
-              <a class="page-scroll" href="#page-top">HOME</a>
-            </li>
-            <li>
-              <a class="page-scroll" href="#about">WHO WE ARE</a>
-            </li>
-            <li>
-              <a class="page-scroll" href="#services">OUR SERVICES</a>
-            </li>
-            <li>
-              <a class="page-scroll" href="#team">TEAM</a>
-            </li>
-            <li>
-              <a class="page-scroll" href="#contact">CONTACT</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
+    <div id="nav"></div>
 
     <header class="intro">
       <!-- Video from YouTube. Have Questions? How To: https://github.com/pupunzi/jquery.mb.YTPlayer/wiki -->
@@ -107,11 +53,12 @@
 
       <div class="intro-body">
         <img
-          src="img/logo.png"
+          src="img/logo_premier_inmobiliaria.png"
           alt=""
           class="wow fadeIn"
           data-wow-duration="4s"
           data-wow-delay=".4s"
+          style="width: 800px"
         />
         <div
           id="clock"
@@ -119,7 +66,7 @@
           data-wow-duration="6s"
           data-wow-delay=".6s"
         ></div>
-        <p
+        <!-- <p
           class="intro-text wow fadeIn"
           data-wow-duration="7s"
           data-wow-delay=".7s"
@@ -145,7 +92,7 @@
               ><i class="fa fa-chevron-down"></i> CONTACT US</a
             >
           </li>
-        </ul>
+        </ul> -->
       </div>
 
       <div class="video-controls">
@@ -710,6 +657,12 @@
         transitionDuration: 2000,
         slides: [{ src: "img/2.jpg" }],
         transition: "swirlRight",
+      });
+
+      $(document).ready(function () {
+        $.get("nav.html", function (data) {
+          $("#nav").replaceWith(data);
+        });
       });
     </script>
 

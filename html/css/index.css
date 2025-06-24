@@ -21,7 +21,9 @@
 }
 
 #eventos {
-    background-image: url("img/inicio/eventos/fondo-web.jpg");
+    #background-video source {
+        src: url("img/inicio/videos/eventos-cultura.mp4");
+    }
 }
 
 .center-vertical {
@@ -41,7 +43,9 @@
     }
 
     #eventos {
-        background-image: url("img/inicio/eventos/fondo-mobile.jpg");
+        #background-video source {
+            src: url("img/inicio/videos/eventos-cultura.mp4");
+        }
     }
 
     .center-vertical {

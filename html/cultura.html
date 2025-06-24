@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+
+    <title>Premier Automotriz</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- Custom fonts -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link href="css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+    <link href="css/ionicons.min.css" rel="stylesheet" type="text/css" />
+    <link href="css/animate.min.css" rel="stylesheet" type="text/css" />
+
+    <!-- Background Slider -->
+    <link href="js/vegas/vegas.min.css" rel="stylesheet" type="text/css" />
+
+    <!-- Custom CSS -->
+    <link href="css/csoon.css" rel="stylesheet" />
+    <link href="css/division-automotriz.css" rel="stylesheet" />
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <style>
+      #background-video {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        z-index: -1;
+      }
+
+      @media (max-width: 768px) {
+        #background-video source {
+          src: url("img/inicio/videos/mobile.mp4");
+        }
+      }
+
+      #experiencia-premier {
+        background-image: url("img/inicio/experiencia-premier/fondo-web.jpg");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        color: white;
+      }
+
+      @media (max-width: 768px) {
+        #experiencia-premier {
+          background-image: url("img/inicio/experiencia-premier/fondo-mobile.jpg");
+          color: white;
+        }
+      }
+
+      #eventos {
+        background-image: url("img/inicio/eventos/fondo-web.jpg");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        color: white;
+      }
+
+      @media (max-width: 768px) {
+        #eventos {
+          background-image: url("img/inicio/eventos/fondo-mobile.jpg");
+          color: white;
+        }
+      }
+
+      .center-vertical {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+      }
+
+      @media (min-width: 769px) {
+        .center-vertical {
+          height: 10vh; /* Altura para pantallas grandes */
+        }
+      }
+
+      @media (max-width: 768px) {
+        .center-vertical {
+          height: 20vh; /* Altura para dispositivos móviles */
+        }
+      }
+
+      @media (max-width: 992px) and (min-width: 769px) {
+        .center-vertical {
+          flex-direction: row; /* Cambia la dirección a fila para tabletas */
+          height: auto; /* Ajusta la altura automáticamente */
+        }
+      }
+    </style>
+  </head>
+
+  <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+    <!-- Preloader -->
+    <div id="preloader"><div id="status">&nbsp;</div></div>
+
+    <div id="nav"></div>
+
+    <!-- Intro Header -->
+    <header class="intro">
+      <div class="intro-body">
+        <img
+          src="img/dealers/banner.png"
+          alt=""
+          class="wow fadeIn"
+          data-wow-duration="4s"
+          data-wow-delay=".4s"
+          style="width: 800px"
+        />
+        <div
+          id="clock"
+          class="wow fadeIn"
+          data-wow-duration="6s"
+          data-wow-delay=".6s"
+        ></div>
+      </div>
+    </header>
+
+    <!-- Misión, Visión, Propósito -->
+    <section id="about2" class="container-fluid text-center wow fadeIn">
+      <div class="col-lg-10 col-lg-offset-1">
+        <div class="row">
+          <div class="col-lg-4 col-sm-6 wow fadeIn" data-wow-delay=".2s">
+            <h2>MISIÓN</h2>
+            <p>
+              Atender, ayudar y ofrecer la mejor experiencia de servicio a toda
+              persona que tenga contacto, poniendo en práctica nuestros valores
+              Premier para dejar la mejor impresión.
+            </p>
+          </div>
+          <div class="col-lg-4 col-sm-6 wow fadeIn" data-wow-delay=".4s">
+            <h2>VISIÓN</h2>
+            <p>
+              Ser distinguidos como el Grupo que ofrece la mejor atención y
+              servicio a nuestros clientes, siendo el lugar preferido para
+              trabajar y generando bienestar en la comunidad.
+            </p>
+          </div>
+          <div class="col-lg-4 col-sm-6 wow fadeIn" data-wow-delay=".6s">
+            <h2>PROPÓSITO</h2>
+            <p>Generar siempre una experiencia fuera de serie para todos.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Logros -->
+    <section id="about2" class="container-fluid text-center wow fadeIn">
+      <div class="col-lg-10 col-lg-offset-1">
+        <div class="row">
+          <div class="col-lg-3 col-sm-6 wow fadeIn" data-wow-delay=".2s">
+            <h4>
+              <img
+                src="img/inicio/logos/esr.png"
+                width="150"
+                height="150"
+                alt="ESR"
+              /><br />
+            </h4>
+            <p>
+              CMEFI (Centro Mexicano para la Filantropía) otorgó a Premier
+              Automotriz el distintivo ESR en 2023 y con mucho orgullo
+              agradecemos a todos los colaboradores que lo hacen posible.
+            </p>
+          </div>
+          <div class="col-lg-3 col-sm-6 wow fadeIn" data-wow-delay=".4s">
+            <h4>
+              <img
+                src="img/inicio/logos/expansion_2024.png"
+                width="150"
+                height="150"
+                alt="ESR"
+              /><br />
+            </h4>
+            <p>
+              En 2024 logramos posicionarnos en el lugar 9 a nivel nacional en
+              el ranking los lugares donde todos quieren trabajar de Super
+              Empresas de la revista Expansión.
+            </p>
+          </div>
+          <div class="col-lg-3 col-sm-6 wow fadeIn" data-wow-delay=".6s">
+            <h4>
+              <img
+                src="img/inicio/logos/expansion_500.png"
+                width="150"
+                height="150"
+                alt="ESR"
+              /><br />
+            </h4>
+            <p>
+              Actualmente estamos en el lugar 259 de las 500 empresas más
+              importantes de México.
+            </p>
+          </div>
+          <div class="col-lg-3 col-sm-6 wow fadeIn" data-wow-delay=".8s">
+            <h4>
+              <img
+                src="img/inicio/logos/logo_premier_automotriz.png"
+                width="300"
+                height="150"
+                alt="ESR"
+              /><br />
+            </h4>
+            <ul>
+              <li>Mejor desempeño en crecimiento en ventas del año</li>
+              <li>Mejor desempeño en Financiera de marca del año</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experiencia Premier -->
+    <section
+      id="experiencia-premier"
+      class="container-fluid text-center wow fadeIn"
+      style="padding-top: 50px; height: 220px"
+    >
+      <div class="row">
+        <div class="col-lg-8 col-lg-offset-2">
+          <h2>EXPERIENCIA PREMIER</h2>
+          <p>
+            La Experiencia Premier es mucho más que trabajar juntos; es crear un
+            ambiente donde nuestra gente se sienta valorada y conectada.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Eventos -->
+    <section id="eventos" class="container-fluid text-center wow fadeIn">
+      <div class="row">
+        <div
+          class="col-lg-6 col-md-6 col-sm-12 wow fadeIn center-vertical"
+          data-wow-delay=".4s"
+        >
+          <h2>EVENTOS</h2>
+          <p>
+            Buscamos tener cercanía con nuestros colaboradores con programas y
+            eventos, promoviendo la cultura, valores y objetivos empresariales.
+          </p>
+        </div>
+        <div
+          class="col-lg-6 col-md-6 col-sm-12 wow fadeIn center-vertical"
+          data-wow-delay=".4s"
+        >
+          <h2>CULTURA Y LIDERAZGO</h2>
+          <p>
+            En Premier Automotriz acompañamos a nuestra gente a crecer y
+            sentirse bien, con programas que impulsan su bienestar, desarrollo
+            profesional, salud integral y liderazgo, fortaleciendo nuestra
+            cultura con propósito.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Valores -->
+    <div id="valores" class="wow fadeIn">
+      <div class="image-background image-background-valores">
+        <div class="text-center-overlay">VALORES</div>
+      </div>
+    </div>
+
+    <!-- Hago lo necesario -->
+    <section id="aferrado" class="container-fluid text-center wow fadeIn">
+      <div class="row">
+        <div class="col-lg-6 col-lg-offset-6 text-left text-white">
+          <p class="fs-4">
+            Hago lo necesario, legal y ético para lograr el objetivo.
+          </p>
+        </div>
+        <div class="col-lg-4">
+          <!-- La imagen se mantiene como fondo -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Servicio WOW -->
+    <section id="servicio-wow" class="container-fluid text-center wow fadeIn">
+      <div class="row">
+        <div class="col-lg-6 col-lg-offset-6 text-left text-white">
+          <p class="fs-4">Doy más de lo que el cliente espera de mi.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contagio Felicidad -->
+    <section
+      id="contagio-felicidad"
+      class="container-fluid text-center wow fadeIn"
+    >
+      <div class="row">
+        <div class="col-lg-6 col-lg-offset-6 text-left text-white">
+          <p class="fs-4">
+            Transmito felicidad a los demás a través de acciones que generan
+            bienestar.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Diversión -->
+    <section id="diversion" class="container-fluid text-center wow fadeIn">
+      <div class="row">
+        <div class="col-lg-6 col-lg-offset-6 text-left text-white">
+          <p class="fs-4">
+            Disfruto el trabajo, con un buen ambiente, en un marco de respeto y
+            resultado.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <script>
+      $(document).ready(function () {
+        $.get("nav.html", function (data) {
+          $("#nav").replaceWith(data);
+        });
+      });
+    </script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="js/jquery.easing.min.js"></script>
+    <script src="js/jquery.countdown.min.js"></script>
+    <script src="js/device.min.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script src="js/smoothscroll.js"></script>
+    <script src="js/form.js"></script>
+    <script src="js/jquery.placeholder.min.js"></script>
+
+    <!-- Google Map -->
+    <!-- Google Maps API Key - Use your own API key to enable the map feature. More information on the Google Maps API can be found at https://developers.google.com/maps/ -->
+    <script
+      type="text/javascript"
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCRngKslUGJTlibkQ3FkfTxj3Xss1UlZDA&amp;sensor=false"
+    ></script>
+    <script src="js/map.js"></script>
+
+    <!-- Background image -->
+    <script src="js/vegas/vegas.min.js"></script>
+    <script>
+      $("body").vegas({
+        transitionDuration: 2000,
+        slides: [{ src: "img/2.jpg" }],
+        transition: "swirlRight",
+      });
+    </script>
+
+    <!-- Custom Theme JavaScript -->
+    <script src="js/csoon.js"></script>
+  </body>
+</html>

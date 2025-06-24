@@ -51,7 +51,7 @@
   background-image: url("../img/division-automotriz/valores-fondo-web.jpg");
   background-size: cover;
   background-position: center;
-  height: 300px; /* Ajusta la altura según sea necesario */
+  height: 200px; /* Ajusta la altura según sea necesario */
 }
 
 @media (max-width: 767px) {
