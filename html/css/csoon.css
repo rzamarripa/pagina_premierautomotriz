@@ -596,7 +596,8 @@ a.fa {
 /* Sponsors */
 
 #sponsor {
-  background: rgba(0, 0, 0, 0.8);
+  background-color: rgba(0, 0, 0, 0.8);
+  font-family: "Bebas Neue", sans-serif;
 }
 
 .sponsor img {
@@ -710,6 +711,13 @@ section.demosection a {
   text-align: center;
   padding: 1rem;
   border-radius: 0.5rem;
+}
+
+.reconocimiento-section {
+  min-height: 600px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 /* Navbar */
@@ -963,4 +971,26 @@ section.demosection a {
 
 .font-montserrat {
   font-family: "Montserrat", Arial, sans-serif !important;
+  text-transform: none !important;
+}
+
+.img-agencia {
+  width: 250px;
+  max-width: 100%;
+  height: auto;
+  margin: 0 auto;
+  display: block;
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
+  text-align: left;
+}
+
+.dealer-team-section {
+  min-height: 600px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }

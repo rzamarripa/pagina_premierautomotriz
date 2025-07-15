@@ -14,6 +14,11 @@
     letter-spacing: 1px;
     font-size: 1.2em;
   }
+  .navbar-nav > li.active > a {
+    border-bottom: 2px solid #b71c1c;
+    color: #b71c1c !important;
+    background: transparent !important;
+  }
 </style>
 <nav
   class="navbar navbar-custom navbar-fixed-top wow fadeIn"
@@ -74,9 +79,9 @@
         <li>
           <a class="page-scroll" href="experiencia-premier.html">EXPERIENCIA</a>
         </li>
-        <li>
+        <!-- <li>
           <a class="page-scroll" href="cultura.html">CULTURA</a>
-        </li>
+        </li> -->
         <li>
           <a class="page-scroll" href="bolsa-trabajo.html">BOLSA DE TRABAJO</a>
         </li>
@@ -87,3 +92,21 @@
     </div>
   </div>
 </nav>
+<script>
+  $(document).ready(function () {
+    $.get("nav.html", function (data) {
+      $("#nav").replaceWith(data);
+      // Aquí va el script de activación, NO dentro de nav.html
+      var path = window.location.pathname.split("/").pop();
+      if (path === "" || path === "/") path = "index.html";
+      if (!path.endsWith(".html") && path !== "index.html") path += ".html";
+      setTimeout(function () {
+        document.querySelectorAll(".navbar-nav li a").forEach(function (link) {
+          if (link.getAttribute("href") === path) {
+            link.parentElement.classList.add("active");
+          }
+        });
+      }, 10);
+    });
+  });
+</script>
