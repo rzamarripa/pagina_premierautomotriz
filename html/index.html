@@ -166,6 +166,7 @@
     </section>
 
     <!-- dealers -->
+
     <div id="sponsor" class="wow fadeIn">
       <div class="container-fluid">
         <div class="row sponsor text-center">
@@ -177,7 +178,7 @@
         </div>
       </div>
     </div>
-
+    <div id="dealers-top"></div>
     <div id="dealers"></div>
 
     <!-- sponsors -->
@@ -698,7 +699,18 @@
         });
 
         $.get("dealers-partial.html", function (data) {
-          $("#dealers").replaceWith(data);
+          // Envolver el contenido en un div con id dealers-top para mantener el ancla
+          $("#dealers-top").replaceWith(
+            '<div id="dealers-top">' + data + "</div>"
+          );
+
+          // Si la URL tiene #dealers-top, haz scroll después de reemplazar
+          if (window.location.hash === "#dealers-top") {
+            setTimeout(function () {
+              var el = document.getElementById("dealers-top");
+              if (el) el.scrollIntoView({ behavior: "smooth" });
+            }, 100); // pequeño delay para asegurar que el DOM se actualizó
+          }
         });
       });
     </script>
