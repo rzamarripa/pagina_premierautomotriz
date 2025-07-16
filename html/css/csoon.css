@@ -974,6 +974,11 @@ section.demosection a {
   text-transform: none !important;
 }
 
+.font-montserrat-bold {
+  font-family: "Montserrat", Arial, sans-serif !important;
+  font-weight: bold !important;
+}
+
 .img-agencia {
   width: 250px;
   max-width: 100%;
@@ -993,4 +998,27 @@ ul {
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+
+@font-face {
+  font-family: "Bebas Neue";
+  src: url("../fonts/BebasNeue.otf") format("opentype"),
+    url("../fonts/BebasNeue Regular.ttf") format("truetype"),
+    url("../fonts/BEBASNEUE BOLD.TTF") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url("../fonts/Montserrat-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url("../fonts/Montserrat-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
 }
