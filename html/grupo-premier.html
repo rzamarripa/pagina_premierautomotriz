@@ -36,6 +36,23 @@
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
       <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
+    <style>
+      #background-video {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        z-index: -1;
+      }
+
+      @media (max-width: 768px) {
+        #background-video source {
+          src: url("img/grupoPremier/videos/mapa-presencia-mobile.mp4");
+        }
+      }
+    </style>
   </head>
 
   <body
@@ -73,32 +90,25 @@
     </header>
 
     <!-- Nueva Sección con Fondo -->
-    <section class="container-fluid text-center grupo-premier-section">
-      <div class="row">
-        <div class="col-md-8 col-md-offset-2">
-          <p style="font-weight: bold">
-            Originarios del orgulloso estado de Sinaloa, hemos expandido nuestra
-            presencia a siete estados de la República Mexicana y fortalecido
-            nuestro impacto a nivel nacional con alianzas estratégicas junto a
-            más de 22 marcas automotrices de renombre. En Culiacán, marcamos
-            diferencia con Housesin, nuestra visionaria desarrolladora de
-            vivienda; en Ciudad de México y Santiago de Chile, consolidamos
-            nuestro liderazgo con Little Caesars, y con Inmobiliaria Premier,
-            hemos materializado proyectos de gran escala en colaboración con los
-            principales bancos de México.
-          </p>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-md-6">
-          <p style="text-align: left">
-            Grupo Premier es un negocio humano, con la mirada en la gente, que
-            aporta a nuestra sociedad a través de la generación de empleos. Nos
-            enorgullece formar parte del camino de nuestros clientes,
-            colaboradores y aliados, buscando seguir avanzando a su lado.
-          </p>
-        </div>
-      </div>
+    <section
+      id="about"
+      class="container-fluid text-center wow fadeIn p-4 m-4"
+      style="
+        position: relative;
+        margin: 0 !important;
+        width: 100%;
+        height: 100%;
+        padding: 100px !important;
+        object-fit: contain;
+      "
+    >
+      <video autoplay muted loop id="background-video">
+        <source
+          src="img/grupoPremier/videos/mapa-presencia.mp4"
+          type="video/mp4"
+        />
+        Tu navegador no soporta el video.
+      </video>
     </section>
 
     <!-- Divisiones Premier -->

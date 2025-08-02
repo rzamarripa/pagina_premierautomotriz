@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BYD Layout Test - 2x2 Grid</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/font-awesome.min.css" />
+    <link rel="stylesheet" href="css/animate.min.css" />
+    <style>
+      /* ===== SISTEMA DE AGENCIAS OPTIMIZADO ===== */
+
+      /* Estilos base para el grid de agencias */
+      .dealer-grid {
+        display: grid;
+        gap: 30px;
+        margin: 0 auto;
+        padding: 20px;
+      }
+
+      /* Layout específico para BYD 2x2 */
+      .dealer-grid.byd-layout[data-agencies="4"] {
+        grid-template-columns: repeat(2, 1fr);
+        max-width: 900px;
+      }
+
+      /* Responsive para BYD */
+      @media (max-width: 1200px) {
+        .dealer-grid.byd-layout[data-agencies="4"] {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+
+      @media (max-width: 768px) {
+        .dealer-grid.byd-layout[data-agencies="4"] {
+          grid-template-columns: 1fr !important;
+        }
+      }
+
+      /* Estilos para las tarjetas de agencias */
+      .dealer-card {
+        background: #fff;
+        border-radius: 10px;
+        padding: 20px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        transition: transform 0.3s ease;
+      }
+
+      .dealer-card:hover {
+        transform: translateY(-5px);
+      }
+
+      .dealer-card h4 {
+        margin-bottom: 15px;
+        font-weight: bold;
+        color: #333;
+        font-size: 1.5em;
+      }
+
+      .dealer-image {
+        max-width: 100%;
+        height: auto;
+        border-radius: 8px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease;
+        margin-bottom: 15px;
+      }
+
+      .dealer-image:hover {
+        transform: scale(1.05);
+      }
+
+      /* Estilos para los contactos */
+      .dealer-contacts {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+      }
+
+      /* Para BYD que tiene botones en dos filas */
+      .dealer-card.byd-layout .dealer-contacts {
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      .dealer-card.byd-layout .dealer-contacts .row-buttons {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 5px;
+      }
+
+      .dealer-contacts li {
+        display: inline-block;
+        margin: 0;
+      }
+
+      .dealer-contacts a {
+        display: inline-block;
+        text-decoration: none;
+        transition: transform 0.2s ease;
+      }
+
+      .dealer-contacts a:hover {
+        transform: scale(1.1);
+      }
+
+      .fa-stack {
+        font-size: 1.2em;
+      }
+
+      .fa-stack-2x {
+        color: #007bff;
+      }
+
+      .fa-stack-1x {
+        color: white;
+      }
+
+      /* Estilos para el header de marca */
+      .brand-header {
+        margin-bottom: 30px;
+      }
+
+      .gray {
+        background-color: #333;
+      }
+
+      .font-bebas-neue {
+        font-family: "Bebas Neue", sans-serif;
+        font-size: 2em;
+      }
+
+      /* Responsive general */
+      @media (max-width: 768px) {
+        .dealer-grid {
+          gap: 20px;
+          padding: 15px;
+        }
+
+        .dealer-card {
+          padding: 15px;
+        }
+
+        .dealer-card h4 {
+          font-size: 1.3em;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- BYD - 4 agencias (2x2) - VERSIÓN LIMPIA -->
+    <div class="brand-header wow fadeIn">
+      <div class="container-fluid">
+        <div class="row sponsor text-center">
+          <div
+            class="col-md-10 gray col-md-offset-1 text-center p-4 text-white font-bebas-neue"
+          >
+            BYD
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <section
+      class="dealer-section container-fluid text-center wow fadeIn"
+      style="background: #fff"
+    >
+      <div class="dealer-grid byd-layout" data-agencies="4">
+        <div class="dealer-card">
+          <h4>Culiacán</h4>
+          <p>
+            <img
+              src="img/division-automotriz/agencias/byd-culiacan.jpg"
+              class="dealer-image"
+              alt="Agencia Culiacán"
+            />
+          </p>
+          <ul class="dealer-contacts">
+            <div class="row-buttons">
+              <li>
+                <a
+                  href="https://www.google.com/maps/place/BYD+Congreso+Culiac%C3%A1n/"
+                  target="_blank"
+                  title="Ubicación"
+                >
+                  <span class="fa-stack">
+                    <i class="fa-solid fa-circle fa-stack-2x"></i>
+                    <i
+                      class="fa-solid fa-location-dot fa-stack-1x fa-inverse"
+                    ></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="tel:6677398640" title="Teléfono: 667 739 8640">
+                  <span class="fa-stack">
+                    <i class="fa-solid fa-circle fa-stack-2x"></i>
+                    <i class="fa-solid fa-phone fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+            </div>
+            <div class="row-buttons">
+              <li>
+                <a
+                  href="https://www.facebook.com/bydcongresoculiacan"
+                  target="_blank"
+                  title="Facebook"
+                >
+                  <span class="fa-stack">
+                    <i class="fa-solid fa-circle fa-stack-2x"></i>
+                    <i class="fa-brands fa-facebook fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://www.instagram.com/byd.congreso/"
+                  target="_blank"
+                  title="Instagram"
+                >
+                  <span class="fa-stack">
+                    <i class="fa-solid fa-circle fa-stack-2x"></i>
+                    <i
+                      class="fa-brands fa-instagram fa-stack-1x fa-inverse"
+                    ></i>
+                  </span>
+                </a>
+              </li>
+            </div>
+          </ul>
+        </div>
+
+        <div class="dealer-card">
+          <h4>Los Mochis</h4>
+          <p>
+            <img
+              src="img/division-automotriz/agencias/byd-ahome.jpg"
+              class="dealer-image"
+              alt="Agencia Los Mochis"
+            />
+          </p>
+          <ul class="dealer-contacts">
+            <div class="row-buttons">
+              <li>
+                <a
+                  href="https://www.google.com/maps/place/BYD+Premier+Ahome/"
+                  target="_blank"
+                  title="Ubicación"
+                >
+                  <span class="fa-stack">
+                    <i class="fa-solid fa-circle fa-stack-2x"></i>
+                    <i
+                      class="fa-solid fa-location-dot fa-stack-1x fa-inverse"
+                    ></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="tel:6683705120" title="Teléfono: 668 370 5120">
+                  <span class="fa-stack">
+                    <i class="fa-solid fa-circle fa-stack-2x"></i>
+                    <i class="fa-solid fa-phone fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+            </div>
+            <div class="row-buttons">
+              <li>
+                <a
+                  href="https://www.facebook.com/bydpremierahome"
+                  target="_blank"
+                  title="Facebook"
+                >
+                  <span class="fa-stack">
+                    <i class="fa-solid fa-circle fa-stack-2x"></i>
+                    <i class="fa-brands fa-facebook fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://www.instagram.com/byd.ahome/"
+                  target="_blank"
+                  title="Instagram"
+                >
+                  <span class="fa-stack">
+                    <i class="fa-solid fa-circle fa-stack-2x"></i>
+                    <i
+                      class="fa-brands fa-instagram fa-stack-1x fa-inverse"
+                    ></i>
+                  </span>
+                </a>
+              </li>
+            </div>
+          </ul>
+        </div>
+
+        <div class="dealer-card">
+          <h4>Tijuana</h4>
+          <p>
+            <img
+              src="img/division-automotriz/agencias/byd-tijuana.jpg"
+              class="dealer-image"
+              alt="Agencia Tijuana"
+            />
+          </p>
+          <ul class="dealer-contacts">
+            <div class="row-buttons">
+              <li>
+                <a
+                  href="https://www.google.com/maps/place/BYD+PREMIER+TIJUANA/"
+                  target="_blank"
+                  title="Ubicación"
+                >
+                  <span class="fa-stack">
+                    <i class="fa-solid fa-circle fa-stack-2x"></i>
+                    <i
+                      class="fa-solid fa-location-dot fa-stack-1x fa-inverse"
+                    ></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="tel:6644407745" title="Teléfono: 664 440 7745">
+                  <span class="fa-stack">
+                    <i class="fa-solid fa-circle fa-stack-2x"></i>
+                    <i class="fa-solid fa-phone fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+            </div>
+            <div class="row-buttons">
+              <li>
+                <a
+                  href="https://www.facebook.com/profile.php?id=61568724350100"
+                  target="_blank"
+                  title="Facebook"
+                >
+                  <span class="fa-stack">
+                    <i class="fa-solid fa-circle fa-stack-2x"></i>
+                    <i class="fa-brands fa-facebook fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://www.instagram.com/bydtijuana/"
+                  target="_blank"
+                  title="Instagram"
+                >
+                  <span class="fa-stack">
+                    <i class="fa-solid fa-circle fa-stack-2x"></i>
+                    <i
+                      class="fa-brands fa-instagram fa-stack-1x fa-inverse"
+                    ></i>
+                  </span>
+                </a>
+              </li>
+            </div>
+          </ul>
+        </div>
+
+        <div class="dealer-card">
+          <h4>Mexicali</h4>
+          <p>
+            <img
+              src="img/avatar4.jpg"
+              class="dealer-image"
+              alt="Agencia Mexicali"
+            />
+          </p>
+          <ul class="dealer-contacts">
+            <div class="row-buttons">
+              <li>
+                <a
+                  href="https://www.google.com/maps/place/BYD+MEXICALI/"
+                  target="_blank"
+                  title="Ubicación"
+                >
+                  <span class="fa-stack">
+                    <i class="fa-solid fa-circle fa-stack-2x"></i>
+                    <i
+                      class="fa-solid fa-location-dot fa-stack-1x fa-inverse"
+                    ></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="tel:6867820891" title="Teléfono: 686 782 0891">
+                  <span class="fa-stack">
+                    <i class="fa-solid fa-circle fa-stack-2x"></i>
+                    <i class="fa-solid fa-phone fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+            </div>
+            <div class="row-buttons">
+              <li>
+                <a
+                  href="https://www.facebook.com/profile.php?id=61568727380065"
+                  target="_blank"
+                  title="Facebook"
+                >
+                  <span class="fa-stack">
+                    <i class="fa-solid fa-circle fa-stack-2x"></i>
+                    <i class="fa-brands fa-facebook fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://www.instagram.com/byd.mexicali/"
+                  target="_blank"
+                  title="Instagram"
+                >
+                  <span class="fa-stack">
+                    <i class="fa-solid fa-circle fa-stack-2x"></i>
+                    <i
+                      class="fa-brands fa-instagram fa-stack-1x fa-inverse"
+                    ></i>
+                  </span>
+                </a>
+              </li>
+            </div>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script>
+      // Inicializar WOW.js
+      new WOW().init();
+
+      // Función para verificar el layout
+      function checkBYDLayout() {
+        const grid = document.querySelector(".dealer-grid.byd-layout");
+        const computedStyle = window.getComputedStyle(grid);
+        const gridTemplateColumns = computedStyle.getPropertyValue(
+          "grid-template-columns"
+        );
+
+        console.log("BYD Grid Layout:", gridTemplateColumns);
+        console.log("Data agencies:", grid.getAttribute("data-agencies"));
+        console.log("Grid class:", grid.className);
+
+        // Verificar que sea 2x2
+        if (gridTemplateColumns.includes("repeat(2, 1fr)")) {
+          console.log("✅ BYD layout 2x2 funcionando correctamente");
+        } else {
+          console.log("❌ BYD layout no está funcionando como esperado");
+        }
+      }
+
+      // Ejecutar al cargar
+      document.addEventListener("DOMContentLoaded", checkBYDLayout);
+
+      // Verificar en resize
+      window.addEventListener("resize", checkBYDLayout);
+    </script>
+  </body>
+</html>

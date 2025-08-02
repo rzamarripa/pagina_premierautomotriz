@@ -70,15 +70,17 @@
       </div>
 
       <div class="video-controls">
-        <a id="video-volume" class="fa fa-volume-off fa-lg" href="#"></a>
-        <a id="video-play" class="fa fa-pause fa-lg" href="#"></a>
+        <a
+          id="video-volume"
+          class="fa-solid fa-volume-xmark fa-lg"
+          href="#"
+        ></a>
+        <a id="video-play" class="fa-solid fa-pause fa-lg" href="#"></a>
       </div>
     </header>
 
     <!-- Action2 Section -->
-    <section
-      class="action2 container-fluid text-center wow fadeIn rojo-premier"
-    >
+    <section class="action2 container-fluid text-center wow fadeIn fondo-azul">
       <div class="row">
         <div class="col-lg-6 col-lg-offset-3">
           <!-- <h2>DESIGNER/CODER FRIENDLY</h2> -->
@@ -204,6 +206,26 @@
       $(document).ready(function () {
         $.get("nav.html", function (data) {
           $("#nav").replaceWith(data);
+        });
+
+        // Inicializar el video inmediatamente
+        $("#bgndVideo").YTPlayer({
+          videoURL: "https://www.youtube.com/watch?v=-1o5dGmsYa8",
+          containment: "body",
+          autoPlay: true,
+          realfullscreen: true,
+          optimizeDisplay: true,
+          loop: true,
+          mute: true,
+          startAt: 0,
+          stopAt: 200,
+          quality: "auto",
+          opacity: 1,
+          showControls: false,
+          showYTLogo: false,
+          vol: 25,
+          fadeIn: 0,
+          fadeOut: 0,
         });
       });
     </script>
