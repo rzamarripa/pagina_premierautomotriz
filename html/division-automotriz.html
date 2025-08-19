@@ -187,14 +187,78 @@
           >
             <a
               href="index.html#dealers-top"
-              style="color: inherit; text-decoration: none"
+              class="dealers-button"
+              style="
+                display: inline-block;
+                background: linear-gradient(135deg, #dc3545 0%, #c82333 100%);
+                color: white;
+                text-decoration: none;
+                padding: 20px 40px;
+                border-radius: 50px;
+                font-size: 1em;
+                font-weight: bold;
+                text-transform: uppercase;
+                letter-spacing: 2px;
+                box-shadow: 0 8px 25px rgba(220, 53, 69, 0.4);
+                transition: all 0.3s ease;
+                position: relative;
+                overflow: hidden;
+                border: none;
+                cursor: pointer;
+                min-width: 300px;
+              "
+              onmouseover="this.style.transform='translateY(-3px)'; this.style.boxShadow='0 12px 35px rgba(220, 53, 69, 0.6)'"
+              onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 8px 25px rgba(220, 53, 69, 0.4)'"
+              onclick="this.style.transform='scale(0.95)'"
             >
-              DEALERS
+              <i
+                class="fa-solid fa-car"
+                style="
+                  margin-right: 15px;
+                  font-size: 1.2em;
+                  animation: pulse 2s infinite;
+                "
+              ></i>
+              VER NUESTROS DEALERS
             </a>
           </div>
         </div>
       </div>
     </div>
+
+    <style>
+      @keyframes pulse {
+        0% {
+          transform: scale(1);
+        }
+        50% {
+          transform: scale(1.1);
+        }
+        100% {
+          transform: scale(1);
+        }
+      }
+
+      .dealers-button:hover {
+        background: linear-gradient(
+          135deg,
+          #c82333 0%,
+          #a71e2a 100%
+        ) !important;
+      }
+
+      .dealers-button:active {
+        transform: scale(0.95) !important;
+      }
+
+      @media (max-width: 768px) {
+        .dealers-button {
+          padding: 15px 30px !important;
+          font-size: 1.2em !important;
+          min-width: 250px !important;
+        }
+      }
+    </style>
 
     <!-- jQuery -->
     <script src="js/jquery.js"></script>
