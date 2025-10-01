@@ -51,6 +51,30 @@
         }
       }
 
+      /* Optimizaciones para video de fondo YouTube */
+      .player {
+        will-change: transform;
+        transform: translateZ(0);
+        backface-visibility: hidden;
+        -webkit-backface-visibility: hidden;
+      }
+
+      /* Reducir calidad en dispositivos móviles */
+      @media (max-width: 768px) {
+        .player {
+          transform: scale(1.1);
+          filter: blur(0.5px);
+        }
+      }
+
+      /* Optimización para conexiones lentas */
+      @media (max-width: 480px) {
+        .player {
+          transform: scale(1.2);
+          filter: blur(1px);
+        }
+      }
+
       #experiencia-premier {
         background-image: url("img/inicio/experiencia-premier/fondo-web.jpg");
         background-size: cover;
@@ -121,7 +145,7 @@
       <a
         id="bgndVideo"
         class="player"
-        data-property="{videoURL:'https://www.youtube.com/watch?v=fQ3y5li7Hu0', containment:'body', autoPlay:true, realfullscreen:true, optimizeDisplay:true, loop:true, mute:true, startAt:0, stopAt: 200, quality:'auto', opacity:1, showControls: false, showYTLogo:false, vol:25}"
+        data-property="{videoURL:'https://www.youtube.com/watch?v=9oOf_Nkq0gs', containment:'body', autoPlay:true, realfullscreen:true, optimizeDisplay:true, loop:true, mute:true, startAt:0, stopAt: 200, quality:'small', opacity:1, showControls: false, showYTLogo:false, vol:0, addRaster:false, useOnMobile:true, mobileFallbackImage:'img/inicio/videos/mobile.mp4'}"
       ></a>
 
       <div class="intro-body">
@@ -789,7 +813,7 @@
           // Si la URL tiene #dealers-top, haz scroll después de reemplazar
           if (window.location.hash === "#dealers-top") {
             setTimeout(function () {
-              var el = document.getElementById("dealers-top");
+              var el = document.getElementByfId("dealers-top");
               if (el) el.scrollIntoView({ behavior: "smooth" });
             }, 100); // pequeño delay para asegurar que el DOM se actualizó
           }
@@ -822,5 +846,66 @@
 
     <!-- Custom Theme JavaScript -->
     <script src="js/csoon.js"></script>
+
+    <script>
+      // Optimizaciones para video de fondo
+      $(document).ready(function () {
+        // Detectar conexión lenta
+        const connection =
+          navigator.connection ||
+          navigator.mozConnection ||
+          navigator.webkitConnection;
+        const isSlowConnection =
+          connection &&
+          (connection.effectiveType === "slow-2g" ||
+            connection.effectiveType === "2g");
+
+        // Configuración optimizada del video
+        const videoConfig = {
+          containment: "body",
+          autoPlay: true,
+          realfullscreen: true,
+          optimizeDisplay: true,
+          loop: true,
+          mute: true,
+          startAt: 0,
+          stopAt: 200,
+          quality: isSlowConnection ? "small" : "medium", // Calidad adaptativa
+          opacity: 1,
+          showControls: false,
+          showYTLogo: false,
+          vol: 0,
+          addRaster: false,
+          useOnMobile: true,
+          mobileFallbackImage: "img/inicio/videos/mobile.mp4",
+          // Optimizaciones adicionales
+          gaTrack: false,
+          realfullscreen: false,
+          onReady: function () {
+            console.log("Video cargado y optimizado");
+          },
+        };
+
+        // Inicializar video con configuración optimizada
+        $("#bgndVideo").YTPlayer(videoConfig);
+
+        // Pausar video cuando no es visible (ahorro de recursos)
+        let isVideoVisible = true;
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach((entry) => {
+            if (entry.target.id === "bgndVideo") {
+              isVideoVisible = entry.isIntersecting;
+              if (isVideoVisible) {
+                $("#bgndVideo").YTPPlay();
+              } else {
+                $("#bgndVideo").YTPPause();
+              }
+            }
+          });
+        });
+
+        observer.observe(document.getElementById("bgndVideo"));
+      });
+    </script>
   </body>
 </html>
