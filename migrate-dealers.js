@@ -11,8 +11,8 @@ const BRANDS_CONFIG = {
   TOYOTA: { agencies: 5, layout: "standard" },
   HYUNDAI: { agencies: 5, layout: "standard" },
   KIA: { agencies: 6, layout: "standard" },
-  "PEUGEOT - FIAT - HEEP - DODGE - RAM": { agencies: 2, layout: "standard" },
-  "MERCEDES BENZ": { agencies: 3, layout: "standard" },
+  "PEUGEOT - FIAT - JEEP - DODGE - RAM": { agencies: 2, layout: "standard" },
+  "MERCEDES - BENZ": { agencies: 3, layout: "standard" },
   "BMW - MINI Y MOTORAD": { agencies: 5, layout: "bmw" },
   "BUICK - GMC": { agencies: 3, layout: "standard" },
   "RANGE ROVER - DEFENDER - DISCOVERY": { agencies: 1, layout: "centered" },
@@ -119,12 +119,12 @@ ${convertBrandHeader(null, "KIA")}
 ${convertBrandSection(null, "KIA")}
 
 <!-- Peugeot, Fiat, etc. -->
-${convertBrandHeader(null, "PEUGEOT - FIAT - HEEP - DODGE - RAM")}
-${convertBrandSection(null, "PEUGEOT - FIAT - HEEP - DODGE - RAM")}
+${convertBrandHeader(null, "PEUGEOT - FIAT - JEEP - DODGE - RAM")}
+${convertBrandSection(null, "PEUGEOT - FIAT - JEEP - DODGE - RAM")}
 
-<!-- Mercedes Benz -->
-${convertBrandHeader(null, "MERCEDES BENZ")}
-${convertBrandSection(null, "MERCEDES BENZ")}
+<!-- Mercedes - Benz -->
+${convertBrandHeader(null, "MERCEDES - BENZ")}
+${convertBrandSection(null, "MERCEDES - BENZ")}
 
 <!-- BMW, Mini, Motorrad -->
 ${convertBrandHeader(null, "BMW - MINI Y MOTORAD")}
