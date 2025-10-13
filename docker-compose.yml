@@ -1,8 +1,17 @@
-   version: '3.8'
+version: "3.8"
 
-   services:
-     web:
-       ports:
-         - "8081:80"
-       volumes:
-         - ./html:/usr/share/nginx/html
+services:
+  premierautomotriz:
+    build:
+      context: ./premierautomotriz
+    ports:
+      - "3006:3000"
+    environment:
+      EMAIL_USER: atencionclientes@bydpremier.com.mx
+      EMAIL_PASS: ByDCLN24
+
+  landing:
+    build:
+      context: ./landing
+    ports:
+      - "8081:80"
