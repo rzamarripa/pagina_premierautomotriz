@@ -1,0 +1,76 @@
+# Archivos de configuración confidenciales
+.env
+.env.local
+.env.production
+.env.staging
+*.env
+docker.env
+config.env
+
+# Credenciales y claves
+*.key
+*.pem
+*.p12
+*.pfx
+secrets/
+credentials/
+
+# Logs
+*.log
+logs/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Dependencias
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Archivos de sistema
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Archivos temporales
+*.tmp
+*.temp
+.cache/
+
+# Build outputs
+dist/
+build/
+*.tgz
+*.tar.gz
+
+# Docker
+.dockerignore
+
+# Archivos de backup
+*.backup
+*.bak
+*.old
+
+# Archivos de configuración específicos del proyecto
+premierautomotriz/.env
+premierautomotriz/config.env
+premierautomotriz/secrets/
+
+# Archivos de correo y SMTP
+smtp-config.json
+email-config.json
+
+# Archivos de reCAPTCHA
+recaptcha-keys.json
