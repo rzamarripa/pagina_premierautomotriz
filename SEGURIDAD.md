@@ -9,12 +9,14 @@ Este proyecto contiene información sensible que **NO debe** ser subida a reposi
 El archivo `.gitignore` está configurado para ignorar:
 
 ### 📧 **Credenciales de Correo**
+
 - `.env` - Variables de entorno principales
 - `docker.env` - Configuración para Docker
 - `config.env` - Configuración del servidor
 - `premierautomotriz/.env` - Variables específicas del servidor
 
 ### 🔑 **Claves y Certificados**
+
 - `*.key` - Archivos de claves privadas
 - `*.pem` - Certificados
 - `*.p12` - Certificados PKCS#12
@@ -22,6 +24,7 @@ El archivo `.gitignore` está configurado para ignorar:
 - `credentials/` - Carpeta de credenciales
 
 ### 📝 **Logs y Archivos Temporales**
+
 - `*.log` - Archivos de log
 - `logs/` - Carpeta de logs
 - `*.tmp` - Archivos temporales
@@ -30,11 +33,13 @@ El archivo `.gitignore` está configurado para ignorar:
 ## 🔧 **Configuración Requerida**
 
 ### 1. **Crear archivo `.env` en la raíz:**
+
 ```bash
 cp env.example .env
 ```
 
 ### 2. **Configurar variables en `.env`:**
+
 ```env
 EMAIL_USER=atencionclientes@bydpremier.com.mx
 EMAIL_PASS=tu_contraseña_real
@@ -42,6 +47,7 @@ RECAPTCHA_SECRET_KEY=tu_recaptcha_secret
 ```
 
 ### 3. **Crear archivo `.env` en `premierautomotriz/`:**
+
 ```env
 EMAIL_USER=atencionclientes@bydpremier.com.mx
 EMAIL_PASS=tu_contraseña_real
@@ -51,6 +57,7 @@ RECAPTCHA_SECRET_KEY=tu_recaptcha_secret
 ## 🛡️ **Buenas Prácticas de Seguridad**
 
 ### ✅ **Hacer:**
+
 - Usar archivos `.env` para credenciales
 - Mantener `.gitignore` actualizado
 - Usar variables de entorno en producción
@@ -58,6 +65,7 @@ RECAPTCHA_SECRET_KEY=tu_recaptcha_secret
 - Usar HTTPS en producción
 
 ### ❌ **No hacer:**
+
 - Subir credenciales al repositorio
 - Hardcodear contraseñas en el código
 - Compartir archivos `.env` por email
@@ -66,6 +74,7 @@ RECAPTCHA_SECRET_KEY=tu_recaptcha_secret
 ## 🔍 **Verificar Seguridad**
 
 ### Comprobar que no hay credenciales en el código:
+
 ```bash
 # Buscar posibles credenciales hardcodeadas
 grep -r "password\|secret\|key" --exclude-dir=node_modules .
@@ -73,6 +82,7 @@ grep -r "EMAIL_PASS\|RECAPTCHA_SECRET" --exclude-dir=node_modules .
 ```
 
 ### Verificar archivos ignorados:
+
 ```bash
 # Ver qué archivos están siendo ignorados
 git status --ignored
@@ -81,6 +91,7 @@ git status --ignored
 ## 🚀 **Configuración para Producción**
 
 ### Variables de entorno en el servidor:
+
 ```bash
 export EMAIL_USER="atencionclientes@bydpremier.com.mx"
 export EMAIL_PASS="contraseña_segura"
@@ -88,6 +99,7 @@ export RECAPTCHA_SECRET_KEY="clave_secreta"
 ```
 
 ### Docker Compose con variables de entorno:
+
 ```yaml
 environment:
   EMAIL_USER: ${EMAIL_USER}
@@ -115,6 +127,7 @@ environment:
 ## 📞 **Contacto de Seguridad**
 
 Para reportar vulnerabilidades o problemas de seguridad:
+
 - Email: seguridad@premierautomotriz.com
 - Teléfono: 667 846 45 61
 

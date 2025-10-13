@@ -1,7 +1,7 @@
 // Contact Form Scripts - Sistema mejorado con validación completa
 $(function () {
   // URL del servidor de correo (actualiza según tu configuración)
-  const API_URL = "http://localhost:3000/enviar-correo";
+  const API_URL = "http://localhost:3006/enviar-correo";
 
   // Mensajes de validación en español
   const validationMessages = {

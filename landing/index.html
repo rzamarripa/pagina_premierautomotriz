@@ -34,6 +34,8 @@
       <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
     <style>
       #background-video {
         position: absolute;
@@ -128,6 +130,112 @@
         .center-vertical {
           flex-direction: row; /* Cambia la dirección a fila para tabletas */
           height: auto; /* Ajusta la altura automáticamente */
+        }
+      }
+
+      /* Estilos para reCAPTCHA */
+      .g-recaptcha {
+        margin: 15px auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 78px;
+        background-color: #f8f9fa;
+        border-radius: 8px;
+        padding: 15px;
+        border: 1px solid #dee2e6;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        transition: all 0.3s ease;
+      }
+
+      .g-recaptcha:hover {
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        border-color: #28a745;
+      }
+
+      .g-recaptcha iframe {
+        border-radius: 4px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+
+      /* Estilo para el label del reCAPTCHA */
+      .form-group.text-center label.control-label {
+        font-size: 14px;
+        margin-bottom: 15px;
+        display: block;
+      }
+
+      .form-group.text-center .help-block {
+        font-size: 12px;
+        margin-top: 8px;
+        color: #6c757d;
+      }
+
+      /* Responsive para reCAPTCHA */
+      @media (max-width: 768px) {
+        .g-recaptcha {
+          margin: 10px auto;
+          padding: 12px;
+          min-height: 70px;
+        }
+
+        .g-recaptcha iframe {
+          transform: scale(0.95);
+          transform-origin: center;
+        }
+
+        .form-group.text-center label.control-label {
+          font-size: 13px;
+          margin-bottom: 12px;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .g-recaptcha {
+          margin: 8px auto;
+          padding: 10px;
+          min-height: 65px;
+        }
+
+        .g-recaptcha iframe {
+          transform: scale(0.85);
+          transform-origin: center;
+        }
+
+        .form-group.text-center label.control-label {
+          font-size: 12px;
+          margin-bottom: 10px;
+        }
+
+        .form-group.text-center .help-block {
+          font-size: 11px;
+        }
+      }
+
+      /* Animación de carga para reCAPTCHA */
+      .g-recaptcha::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: linear-gradient(
+          90deg,
+          transparent,
+          rgba(255, 255, 255, 0.4),
+          transparent
+        );
+        transform: translateX(-100%);
+        animation: loading 2s infinite;
+      }
+
+      @keyframes loading {
+        0% {
+          transform: translateX(-100%);
+        }
+        100% {
+          transform: translateX(100%);
         }
       }
     </style>
@@ -777,6 +885,30 @@
                   <span class="help-block text-danger"></span>
                 </div>
               </div>
+              <div class="col-md-12">
+                <div class="form-group text-center">
+                  <label
+                    class="control-label"
+                    style="color: #333; font-weight: 500; margin-bottom: 10px"
+                  >
+                    <i
+                      class="fa fa-shield"
+                      style="color: #28a745; margin-right: 5px"
+                    ></i>
+                    Verificación de seguridad
+                  </label>
+                  <div
+                    class="g-recaptcha"
+                    data-sitekey="6LfpnaQqAAAAAKPCspbEKthslBoF0Pqg7-I1_hNt"
+                    data-theme="light"
+                    data-size="normal"
+                  ></div>
+                  <small class="help-block text-muted" style="margin-top: 5px">
+                    <i class="fa fa-info-circle"></i>
+                    Por favor, completa la verificación para enviar el mensaje
+                  </small>
+                </div>
+              </div>
               <div id="success"></div>
               <button type="submit" class="btn btn-dark btn-lg font-bebas-neue">
                 Enviar
@@ -846,6 +978,35 @@
 
     <!-- Custom Theme JavaScript -->
     <script src="js/csoon.js"></script>
+
+    <script>
+      $(document).ready(function () {
+        $("#contact-form").on("submit", function (event) {
+          event.preventDefault(); // Evita el envío normal del formulario
+
+          const recaptchaResponse = grecaptcha.getResponse();
+          if (!recaptchaResponse) {
+            toastr.warning("Por favor, completa el reCAPTCHA.");
+            return;
+          }
+
+          $.ajax({
+            url: $(this).attr("action"),
+            method: $(this).attr("method"),
+            data: $(this).serialize(),
+            success: function (response) {
+              toastr.success("Correo enviado exitosamente");
+              $("#contact-form")[0].reset(); // Reinicia el formulario
+              grecaptcha.reset(); // Reinicia el reCAPTCHA
+            },
+            error: function () {
+              grecaptcha.reset();
+              toastr.error("Error al enviar el correo");
+            },
+          });
+        });
+      });
+    </script>
 
     <script>
       // Optimizaciones para video de fondo

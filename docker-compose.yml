@@ -7,11 +7,26 @@ services:
     ports:
       - "3006:3000"
     environment:
-      EMAIL_USER: atencionclientes@bydpremier.com.mx
-      EMAIL_PASS: ByDCLN24
+      EMAIL_USER: ${EMAIL_USER:-atencionclientes@bydpremier.com.mx}
+      EMAIL_PASS: ${EMAIL_PASS:-ByDCLN24}
+      RECAPTCHA_SECRET_KEY: ${RECAPTCHA_SECRET_KEY:-}
+    env_file:
+      - ./premierautomotriz/.env
+    networks:
+      - premier-network
+    restart: unless-stopped
 
   landing:
     build:
       context: ./landing
     ports:
       - "8081:80"
+    networks:
+      - premier-network
+    depends_on:
+      - premierautomotriz
+    restart: unless-stopped
+
+networks:
+  premier-network:
+    driver: bridge
