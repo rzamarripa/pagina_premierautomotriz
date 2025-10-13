@@ -1,4 +1,3 @@
-version: "3.8"
 
 services:
   premierautomotriz:
@@ -20,7 +19,7 @@ services:
     build:
       context: ./landing
     ports:
-      - "8081:80"
+      - "8082:80"
     networks:
       - premier-network
     depends_on:
