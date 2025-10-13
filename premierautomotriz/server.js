@@ -7,6 +7,7 @@ require("dotenv").config();
 const app = express();
 app.use(cors());
 app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json()); // Agregar soporte para JSON
 
 // Configuración del transportador
 const transporter = nodemailer.createTransport({
@@ -42,14 +43,25 @@ const transporter = nodemailer.createTransport({
       "g-recaptcha-response": recaptchaResponse,
     } = req.body;
 
-    const secretKey = process.env.RECAPTCHA_SECRET_KEY;
-    const verificationUrl = `https://www.google.com/recaptcha/api/siteverify?secret=${secretKey}&response=${recaptchaResponse}`;
+    // Validar campos requeridos
+    if (!name || !email || !phone || !message) {
+      return res.status(400).send("Faltan campos requeridos");
+    }
 
     try {
-      const response = await fetch.default(verificationUrl, { method: "POST" });
-      const body = await response.json();
-      if (!body.success) {
-        return res.status(400).send("Error de verificación de reCAPTCHA");
+      // Verificar reCAPTCHA solo si está presente
+      if (recaptchaResponse) {
+        const secretKey = process.env.RECAPTCHA_SECRET_KEY;
+        if (secretKey) {
+          const verificationUrl = `https://www.google.com/recaptcha/api/siteverify?secret=${secretKey}&response=${recaptchaResponse}`;
+          const response = await fetch.default(verificationUrl, {
+            method: "POST",
+          });
+          const body = await response.json();
+          if (!body.success) {
+            return res.status(400).send("Error de verificación de reCAPTCHA");
+          }
+        }
       }
 
       // Continuar con el envío del correo si reCAPTCHA es válido
@@ -65,7 +77,7 @@ const transporter = nodemailer.createTransport({
 
       const mailOptions = {
         from: "hola@camaleonmarketingstudio.com",
-        to: "roberto@masoft.mx, hola@camaleonmarketingstudio.com",
+        to: "roberto@masoft.mx",
         subject: `Página Premier Automotriz: ${name} - ${subject}`,
         html: bodyMessage,
       };
@@ -84,6 +96,6 @@ const transporter = nodemailer.createTransport({
   });
 
   app.listen(3000, () => {
-    console.log("Servidor iniciado en http://localhost:3006");
+    console.log("Servidor iniciado en http://localhost:3000");
   });
 })();
