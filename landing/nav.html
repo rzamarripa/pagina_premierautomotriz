@@ -1,6 +1,24 @@
 <!-- Navigation -->
-<nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
-  <div class="container">
+<style>
+  .navbar-nav > li > a,
+  .navbar-brand {
+    font-family: "Bebas Neue", Arial, sans-serif !important;
+    letter-spacing: 1px;
+    font-size: 1.2em;
+  }
+  .navbar-nav > li.active > a {
+    border-bottom: 2px solid #b71c1c;
+    color: #b71c1c !important;
+    background: transparent !important;
+  }
+</style>
+<nav
+  class="navbar navbar-custom navbar-fixed-top wow fadeIn"
+  data-wow-duration="3s"
+  data-wow-delay=".2s"
+  role="navigation"
+>
+  <div class="container-fluid">
     <div class="navbar-header">
       <button
         type="button"
@@ -8,36 +26,79 @@
         data-toggle="collapse"
         data-target=".navbar-main-collapse"
       >
-        <i class="fa fa-bars"></i>
+        <i class="fa-solid fa-bars fa-2x"></i>
       </button>
-      <a class="navbar-brand page-scroll" href="#page-top">
+      <a
+        class="navbar-brand page-scroll wow fadeInRight"
+        data-wow-duration="1s"
+        data-wow-delay="1.4s"
+        href="#page-top"
+        style="padding: 0 !important"
+      >
         <img
-          src="img/logo_premier_automotriz.png"
+          src="img/logo_premier_automotriz_1.png"
           alt="Premier Automotriz"
-          style="height: 40px"
+          style="height: 60px"
+        />
+        <img
+          src="img/isotipo.png"
+          alt="Isotipo"
+          class="logo"
+          style="width: 1.5em; height: 1.5em"
         />
       </a>
     </div>
-
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
-      <ul class="nav navbar-nav">
-        <!-- Hidden li included to remove active class from about link when scrolled past about section -->
+      <ul
+        class="nav navbar-nav wow fadeInLeft"
+        data-wow-duration="1s"
+        data-wow-delay="1.4s"
+      >
+        <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
         <li class="hidden">
           <a href="#page-top"></a>
         </li>
         <li>
-          <a class="page-scroll" href="#about">Inicio</a>
+          <a class="page-scroll" href="index.html">INICIO</a>
         </li>
         <li>
-          <a class="page-scroll" href="#dealers-top">Dealers</a>
+          <a class="page-scroll" href="reconocimientos.html">RECONOCIMIENTOS</a>
         </li>
         <li>
-          <a class="page-scroll" href="#contact">Contacto</a>
+          <a class="page-scroll" href="experiencia-premier.html">EXPERIENCIA</a>
+        </li>
+        <!-- <li>
+          <a class="page-scroll" href="cultura.html">CULTURA</a>
+        </li> -->
+        <li>
+          <a class="page-scroll" href="bolsa-trabajo.html">BOLSA DE TRABAJO</a>
+        </li>
+        <li>
+          <a class="page-scroll" href="grupo-premier.html">GRUPO PREMIER</a>
+        </li>
+        <li>
+          <a class="page-scroll" href="index.html#contact">CONTACTO</a>
         </li>
       </ul>
     </div>
-    <!-- /.navbar-collapse -->
   </div>
-  <!-- /.container -->
 </nav>
+<script>
+  $(document).ready(function () {
+    $.get("nav.html", function (data) {
+      $("#nav").replaceWith(data);
+      // Aquí va el script de activación, NO dentro de nav.html
+      var path = window.location.pathname.split("/").pop();
+      if (path === "" || path === "/") path = "index.html";
+      if (!path.endsWith(".html") && path !== "index.html") path += ".html";
+      setTimeout(function () {
+        document.querySelectorAll(".navbar-nav li a").forEach(function (link) {
+          if (link.getAttribute("href") === path) {
+            link.parentElement.classList.add("active");
+          }
+        });
+      }, 10);
+    });
+  });
+</script>
