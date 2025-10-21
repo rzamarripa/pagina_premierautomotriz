@@ -1,84 +1,67 @@
-/*!
- * Csoon - Startup and Coming Soon Theme
- */
-
-// Preloader
-jQuery(window).load(function () {
-  // will first fade out the loading animation
-  jQuery("#status").fadeOut();
-  // will fade out the whole DIV that covers the website.
-  jQuery("#preloader").delay(1000).fadeOut("slow");
-});
-
-// jQuery to collapse the navbar on scroll
-$(window).scroll(function () {
-  if ($(".navbar").offset().top > 50) {
-    $(".navbar-fixed-top").addClass("top-nav-collapse");
-  } else {
-    $(".navbar-fixed-top").removeClass("top-nav-collapse");
-  }
-});
-
-// jQuery for page scrolling feature - requires jQuery Easing plugin
-$(function () {
-  $("a.page-scroll").bind("click", function (event) {
-    var $anchor = $(this);
-    $("html, body")
-      .stop()
-      .animate(
-        {
-          scrollTop: $($anchor.attr("href")).offset().top - 64,
-        },
-        1500,
-        "easeInOutExpo"
-      );
-    //event.preventDefault();
-  });
-});
-
-// Highlight the top nav as scrolling occurs
-$("body").scrollspy({
-  target: ".navbar-fixed-top",
-  offset: 65,
-});
-
-// Closes the Responsive Menu on Menu Item Click
-$(".navbar-collapse ul li a").click(function () {
-  $(".navbar-toggle:visible").click();
-});
-
-// Countdown
-$("#clock")
-  .countdown("2017/05/22 10:00:00")
-  .on("update.countdown", function (event) {
-    var $this = $(this).html(
-      event.strftime(
-        "" +
-          "<div><span>%-w</span>week%!w</div>" +
-          "<div><span>%-d</span>day%!d</div>" +
-          "<div><span>%H</span>hr</div>" +
-          "<div><span>%M</span>min</div>" +
-          "<div><span>%S</span>sec</div>"
-      )
-    );
-  });
-
-// HTML5 Placeholder
-$(function () {
-  $("input, textarea").placeholder();
-});
-
-// Load WOW.js on non-touch devices
-var isPhoneDevice = "ontouchstart" in document.documentElement;
+// Custom JavaScript for Premier Automotriz
 $(document).ready(function () {
-  if (isPhoneDevice) {
-    //mobile
-  } else {
-    //desktop
-    // Initialize WOW.js
-    wow = new WOW({
-      offset: 50,
-    });
-    wow.init();
+  // Smooth scrolling for anchor links
+  $('a[href*="#"]:not([href="#"])').click(function () {
+    if (
+      location.pathname.replace(/^\//, "") ==
+        this.pathname.replace(/^\//, "") &&
+      location.hostname == this.hostname
+    ) {
+      var target = $(this.hash);
+      target = target.length ? target : $("[name=" + this.hash.slice(1) + "]");
+      if (target.length) {
+        $("html, body").animate(
+          {
+            scrollTop: target.offset().top - 70,
+          },
+          1000
+        );
+        return false;
+      }
+    }
+  });
+
+  // Initialize WOW.js for animations
+  if (typeof WOW !== "undefined") {
+    new WOW().init();
   }
+
+  // Video controls
+  $("#video-volume").click(function (e) {
+    e.preventDefault();
+    const $this = $(this);
+    if ($this.hasClass("fa-volume-xmark")) {
+      $this.removeClass("fa-volume-xmark").addClass("fa-volume-high");
+      // Unmute video logic here
+    } else {
+      $this.removeClass("fa-volume-high").addClass("fa-volume-xmark");
+      // Mute video logic here
+    }
+  });
+
+  $("#video-play").click(function (e) {
+    e.preventDefault();
+    const $this = $(this);
+    if ($this.hasClass("fa-pause")) {
+      $this.removeClass("fa-pause").addClass("fa-play");
+      // Pause video logic here
+    } else {
+      $this.removeClass("fa-play").addClass("fa-pause");
+      // Play video logic here
+    }
+  });
+
+  // Navbar background on scroll
+  $(window).scroll(function () {
+    if ($(this).scrollTop() > 50) {
+      $(".navbar-custom").addClass("navbar-scrolled");
+    } else {
+      $(".navbar-custom").removeClass("navbar-scrolled");
+    }
+  });
+
+  // Preloader
+  $(window).on("load", function () {
+    $("#preloader").fadeOut("slow");
+  });
 });

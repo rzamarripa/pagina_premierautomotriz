@@ -961,10 +961,12 @@
           // Si la URL tiene #dealers-top, haz scroll después de reemplazar
           if (window.location.hash === "#dealers-top") {
             setTimeout(function () {
-              var el = document.getElementByfId("dealers-top");
+              var el = document.getElementById("dealers-top");
               if (el) el.scrollIntoView({ behavior: "smooth" });
             }, 100); // pequeño delay para asegurar que el DOM se actualizó
           }
+        }).fail(function () {
+          console.log("No se pudo cargar dealers-partial.html");
         });
       });
     </script>
@@ -980,13 +982,14 @@
     <script src="js/form.js"></script>
     <script src="js/jquery.placeholder.min.js"></script>
 
-    <!-- Google Map -->
-    <!-- Google Maps API Key - Use your own API key to enable the map feature. More information on the Google Maps API can be found at https://developers.google.com/maps/ -->
+    <!-- Google Map - Comentado porque no se usa en esta versión -->
+    <!-- 
     <script
       type="text/javascript"
-      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCRngKslUGJTlibkQ3FkfTxj3Xss1UlZDA&amp;sensor=false"
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCRngKslUGJTlibkQ3FkfTxj3Xss1UlZDA&amp;loading=async&amp;callback=initMap"
     ></script>
     <script src="js/map.js"></script>
+    -->
 
     <!-- Plugins for video background -->
     <script src="js/device.min.js"></script>
@@ -1027,61 +1030,59 @@
     <script>
       // Optimizaciones para video de fondo
       $(document).ready(function () {
-        // Detectar conexión lenta
-        const connection =
-          navigator.connection ||
-          navigator.mozConnection ||
-          navigator.webkitConnection;
-        const isSlowConnection =
-          connection &&
-          (connection.effectiveType === "slow-2g" ||
-            connection.effectiveType === "2g");
+        // Solo inicializar el video en dispositivos de escritorio
+        const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
 
-        // Configuración optimizada del video
-        const videoConfig = {
-          containment: "body",
-          autoPlay: true,
-          realfullscreen: true,
-          optimizeDisplay: true,
-          loop: true,
-          mute: true,
-          startAt: 0,
-          stopAt: 200,
-          quality: isSlowConnection ? "small" : "medium", // Calidad adaptativa
-          opacity: 1,
-          showControls: false,
-          showYTLogo: false,
-          vol: 0,
-          addRaster: false,
-          useOnMobile: true,
-          mobileFallbackImage: "img/inicio/videos/mobile.mp4",
-          // Optimizaciones adicionales
-          gaTrack: false,
-          realfullscreen: false,
-          onReady: function () {
-            console.log("Video cargado y optimizado");
-          },
-        };
+        if (!isMobile) {
+          // Detectar conexión lenta
+          const connection =
+            navigator.connection ||
+            navigator.mozConnection ||
+            navigator.webkitConnection;
+          const isSlowConnection =
+            connection &&
+            (connection.effectiveType === "slow-2g" ||
+              connection.effectiveType === "2g");
 
-        // Inicializar video con configuración optimizada
-        $("#bgndVideo").YTPlayer(videoConfig);
+          // Configuración optimizada del video
+          const videoConfig = {
+            containment: "body",
+            autoPlay: true,
+            realfullscreen: false,
+            optimizeDisplay: true,
+            loop: true,
+            mute: true,
+            startAt: 0,
+            stopAt: 200,
+            quality: "small", // Calidad fija en small (720p)
+            opacity: 1,
+            showControls: false,
+            showYTLogo: false,
+            vol: 0,
+            addRaster: false,
+            useOnMobile: false,
+            mobileFallbackImage: "img/inicio/videos/mobile.mp4",
+            gaTrack: false,
+            stopMovieOnBlur: true, // Pausar cuando la pestaña no está visible
+            onReady: function () {
+              console.log("Video de YouTube cargado correctamente");
+            },
+            onError: function (error) {
+              console.log("Error al cargar video de YouTube:", error);
+            },
+          };
 
-        // Pausar video cuando no es visible (ahorro de recursos)
-        let isVideoVisible = true;
-        const observer = new IntersectionObserver((entries) => {
-          entries.forEach((entry) => {
-            if (entry.target.id === "bgndVideo") {
-              isVideoVisible = entry.isIntersecting;
-              if (isVideoVisible) {
-                $("#bgndVideo").YTPPlay();
-              } else {
-                $("#bgndVideo").YTPPause();
-              }
-            }
-          });
-        });
-
-        observer.observe(document.getElementById("bgndVideo"));
+          // Inicializar video con configuración optimizada
+          try {
+            $("#bgndVideo").YTPlayer(videoConfig);
+          } catch (e) {
+            console.log("No se pudo inicializar YouTube Player:", e);
+          }
+        } else {
+          console.log(
+            "Dispositivo móvil detectado - Video de YouTube deshabilitado"
+          );
+        }
       });
     </script>
   </body>
