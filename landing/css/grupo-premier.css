@@ -1,7 +1,8 @@
 .grupo-premier-section,
 .automotriz-section,
 .alimentos-section,
-.inmobiliaria-section {
+.inmobiliaria-section,
+.financiera-section {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -28,6 +29,11 @@
   color: white;
 }
 
+.financiera-section {
+  background-image: url("../img/grupoPremier/financiera/fondo-financiera-web.jpg");
+  color: white;
+}
+
 @media (max-width: 768px) {
   .grupo-premier-section {
     background-image: url("../img/grupoPremier/fondo-mobile.jpg");
@@ -43,5 +49,9 @@
 
   .inmobiliaria-section {
     background-image: url("../img/grupoPremier/inmobiliaria/fondo-inmobiliaria-mobile.jpg");
+  }
+
+  .financiera-section {
+    background-image: url("../img/grupoPremier/financiera/fondo-financiera-mobile.jpg");
   }
 }

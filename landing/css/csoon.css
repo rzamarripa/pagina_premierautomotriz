@@ -326,6 +326,18 @@ a.fa {
 .navbar-custom .nav li.active a:hover {
   color: #fff;
 }
+
+/* Navbar scrolled - fondo más oscuro al hacer scroll */
+.navbar-custom.navbar-scrolled {
+  background-color: rgba(27, 31, 35, 0.98) !important;
+  -webkit-box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  -webkit-transition: background 0.5s ease-in-out;
+  -moz-transition: background 0.5s ease-in-out;
+  transition: background 0.5s ease-in-out;
+}
+
 @media (min-width: 768px) {
   .navbar-custom {
     padding: 30px;
@@ -339,6 +351,16 @@ a.fa {
   .navbar-custom.top-nav-collapse {
     padding: 10px 30px;
     background-color: #1b1f23;
+  }
+  .navbar-custom.navbar-scrolled {
+    padding: 10px 30px;
+    background-color: rgba(27, 31, 35, 0.95) !important;
+    -webkit-box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    -webkit-transition: background 0.5s ease-in-out, padding 0.5s ease-in-out;
+    -moz-transition: background 0.5s ease-in-out, padding 0.5s ease-in-out;
+    transition: background 0.5s ease-in-out, padding 0.5s ease-in-out;
   }
 }
 .top-nav-collapse .container {
@@ -966,6 +988,14 @@ section.demosection a {
 
 .azul-premier-obscuro {
   background-color: #003082;
+}
+
+.azul-financiera-premier {
+  background-color: #2196f3;
+}
+
+.naranja-financiera-premier {
+  background-color: #fdc82f;
 }
 
 .font-bebas-neue {
